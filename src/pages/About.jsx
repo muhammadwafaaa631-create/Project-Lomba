@@ -14,6 +14,8 @@ import {
   ShieldCheck,
   Globe
 } from "lucide-react";
+import { CultureSection } from "../components/about/CultureSection";
+
 
 export default function About() {
   return (
@@ -123,6 +125,10 @@ export default function About() {
           </motion.div>
         </div>
       </section>
+
+      {/* Culture & Identity Section */}
+      <CultureSection />
+
 
       {/* 4. Fitur Utama */}
       <section className="py-24 px-6 bg-slate-50/50 dark:bg-white/5 border-y border-slate-100 dark:border-white/5">

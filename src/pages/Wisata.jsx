@@ -2,13 +2,18 @@ import { useState, useMemo, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import WisataHero from "../components/wisata/WisataHero";
 import { motion, AnimatePresence } from "framer-motion";
-import { Search, Filter, Star, ArrowRight, ExternalLink, TrendingUp } from "lucide-react";
+import { Search, Filter, Star, ArrowRight, ExternalLink, TrendingUp, Calendar, CreditCard } from "lucide-react";
 import { ALL_DESTINATIONS } from "../data/destinations";
+import BookingModal from "../components/wisata/BookingModal";
+
 
 export default function Wisata() {
   const location = useLocation();
   const [activeCategory, setActiveCategory] = useState("Semua");
   const [searchQuery, setSearchQuery] = useState("");
+  const [selectedDest, setSelectedDest] = useState(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
 
   // Get search from URL params if present
   useEffect(() => {
@@ -31,6 +36,12 @@ export default function Wisata() {
       return matchCategory && matchSearch;
     });
   }, [activeCategory, searchQuery]);
+
+  const handleBooking = (dest) => {
+    setSelectedDest(dest);
+    setIsModalOpen(true);
+  };
+
 
   return (
     <div key="wisata-page-main" className="w-full min-h-screen bg-[#FDFBF7] dark:bg-[#0B1120] text-gray-900 dark:text-white transition-colors duration-700">
@@ -118,15 +129,14 @@ export default function Wisata() {
                       <span className="text-[10px] text-gray-400 block uppercase font-bold tracking-widest">Mulai dari</span>
                       <span className="text-blue-600 dark:text-[#0092E4] font-bold">{dest.price}</span>
                     </div>
-                    <a 
-                      href={dest.bookingUrl} 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="text-sm font-bold bg-gray-900 dark:bg-white text-white dark:text-gray-900 px-4 py-2 rounded-xl flex items-center gap-2 group/btn hover:scale-105 transition-all shadow-lg"
+                    <button 
+                      onClick={() => handleBooking(dest)}
+                      className="text-sm font-bold bg-gray-900 dark:bg-white text-white dark:text-gray-900 px-4 py-2 rounded-xl flex items-center gap-2 group/btn hover:scale-105 transition-all shadow-lg shadow-black/10 dark:shadow-white/5"
                     >
-                      Pesan <ExternalLink size={14} />
-                    </a>
+                      Pesan <Calendar size={14} />
+                    </button>
                   </div>
+
                 </div>
               </motion.div>
             ))}
@@ -141,6 +151,13 @@ export default function Wisata() {
           </div>
         )}
       </div>
+
+      <BookingModal 
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+        destination={selectedDest}
+      />
     </div>
+
   );
 }
