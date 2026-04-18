@@ -22,7 +22,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/history" element={<History />} />
-          <Route path="/history/asal-usul" element={<MasaAwal />} />
+          <Route path="/history/masa-awal" element={<MasaAwal />} />
           <Route path="/history/kolonial" element={<HindiaBelanda />} />
           <Route path="/history/peristiwa-penting" element={<Kemerdekaan />} />
           <Route path="/history/modern" element={<MasaModern />} />

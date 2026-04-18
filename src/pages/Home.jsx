@@ -11,6 +11,7 @@ import CallToAction from "../components/home/CallToAction";
 import WeatherWidget from "../components/home/WeatherWidget";
 import SmartCityIntro from "../components/home/SmartCityIntro";
 import HomeHighlights from "../components/home/HomeHighlights";
+import ExploreBandung from "../components/home/ExploreBandung";
 
 
 
@@ -18,12 +19,14 @@ export default function Home() {
     return (
         <div className="w-full flex flex-col bg-transparent text-slate-900 dark:text-white transition-colors duration-700 selection:bg-[#00A8FF]/30 selection:text-white">
             <Hero />
-            <StatSection />
-            <section className="px-6 -mt-8 mb-16 relative z-10">
+            <section className="px-6 -mt-16 mb-8 relative z-20">
                 <div className="max-w-7xl mx-auto">
                     <WeatherWidget />
                 </div>
             </section>
+            
+            <StatSection />
+            <ExploreBandung />
             
             <SmartCityIntro />
             <HomeHighlights />

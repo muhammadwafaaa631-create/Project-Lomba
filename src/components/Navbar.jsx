@@ -34,7 +34,7 @@ export default function Navbar() {
       name: "History", 
       path: "/history",
       subLinks: [
-        { name: "Asal-usul Nama Bandung", path: "/history/asal-usul" },
+        { name: "Masa Awal", path: "/history/masa-awal" },
         { name: "Masa Kolonial", path: "/history/kolonial" },
         { name: "Peristiwa Penting", path: "/history/peristiwa-penting" },
         { name: "Bandung Modern", path: "/history/modern" },

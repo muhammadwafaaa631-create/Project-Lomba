@@ -6,6 +6,7 @@ const WeatherWidget = () => {
   const [weather, setWeather] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [currentTime, setCurrentTime] = useState(new Date());
 
   const fetchWeather = async () => {
     try {
@@ -30,7 +31,12 @@ const WeatherWidget = () => {
     fetchWeather();
     // Refresh setiap 15 menit
     const interval = setInterval(fetchWeather, 15 * 60 * 1000);
-    return () => clearInterval(interval);
+    // Jam real time
+    const timeInterval = setInterval(() => setCurrentTime(new Date()), 1000);
+    return () => {
+      clearInterval(interval);
+      clearInterval(timeInterval);
+    };
   }, []);
 
   const getWeatherIcon = (code) => {
@@ -114,7 +120,7 @@ const WeatherWidget = () => {
               <span className="text-[10px] font-bold text-[#00A8FF] uppercase tracking-[0.2em]">Real-time Updates</span>
             </div>
             <h3 className="text-slate-900 dark:text-white text-3xl font-bold mb-1">Bandung, Jawa Barat</h3>
-            <p className="text-slate-500 dark:text-gray-400 text-sm">Indonesia • {new Date().toLocaleTimeString('id-ID', { hour: '2-digit', minute: '2-digit' })} WIB</p>
+            <p className="text-slate-500 dark:text-gray-400 text-sm">Indonesia • {currentTime.toLocaleTimeString('id-ID', { hour: '2-digit', minute: '2-digit', second: '2-digit' })} WIB</p>
           </div>
 
           {/* Middle: Icon & Condition */}

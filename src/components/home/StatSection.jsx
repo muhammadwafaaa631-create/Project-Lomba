@@ -5,34 +5,38 @@ import { Users, Map, Layout, Sparkles } from "lucide-react";
 const STATS = [
   { 
     id: 1, 
-    label: "Penduduk", 
-    value: 2.5, 
-    suffix: " Juta", 
+    label: "Indeks Kebahagiaan", 
+    value: 82.5, 
+    suffix: "%", 
+    desc: "Tingkat kepuasan & kualitas hidup warga menurut BPS",
     icon: Users,
     color: "from-blue-500 to-cyan-400"
   },
   { 
     id: 2, 
-    label: "Wilayah", 
-    value: 167, 
-    suffix: " km²", 
-    icon: Map,
+    label: "Ekonomi Kreatif", 
+    value: 45, 
+    suffix: "%", 
+    desc: "Kontribusi PDRB dari sektor kreatif & wisata",
+    icon: Sparkles,
     color: "from-blue-600 to-indigo-500"
   },
   { 
     id: 3, 
-    label: "Kota Kreatif", 
-    value: 1, 
-    suffix: " UNESCO", 
-    icon: Layout,
+    label: "Ruang Hijau", 
+    value: 30, 
+    suffix: "%", 
+    desc: "Target pemenuhan area resapan & taman kota",
+    icon: Map,
     color: "from-indigo-600 to-purple-500"
   },
   { 
     id: 4, 
-    label: "Pusat Inovasi", 
-    value: 1, 
-    suffix: " JABAR", 
-    icon: Sparkles,
+    label: "Akses Digital", 
+    value: 95, 
+    suffix: "%", 
+    desc: "Penetrasi internet & layanan Smart City terpadu",
+    icon: Layout,
     color: "from-cyan-500 to-blue-500"
   }
 ];
@@ -103,8 +107,11 @@ function StatCard({ stat, index }) {
           </span>
         </div>
         
-        <p className="mt-2 text-slate-500 dark:text-gray-400 font-medium uppercase tracking-widest text-[10px] md:text-xs">
+        <p className="mt-2 text-slate-900 dark:text-white font-bold uppercase tracking-wide text-xs">
           {stat.label}
+        </p>
+        <p className="mt-2 text-slate-500 dark:text-gray-400 font-medium text-[11px] leading-relaxed">
+          {stat.desc}
         </p>
       </div>
 

@@ -13,7 +13,7 @@ export default function MasaAwal() {
 
     const content = {
         hero: {
-            subtitle: "Asal-usul Nama Bandung",
+            subtitle: "Masa Awal",
             bgImage: "https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&q=80&w=2000"
         },
 
@@ -57,6 +57,26 @@ export default function MasaAwal() {
                 ],
                 facts: [
                     { title: "Benteng Alami", text: "Hutan lebat dan pegunungan menjadikan Bandung benteng perlindungan alami kerajaan." }
+                ],
+                gallery: []
+            },
+            {
+                year: "Etimologi",
+                label: "Nama Bandung",
+                title: "Asal-usul Kata 'Bandung'",
+                description: "Nama 'Bandung' diyakini berasal dari kata 'bendung', merujuk pada terbendungnya Sungai Citarum purba oleh lava Gunung Tangkuban Parahu.",
+                longDescription: "Selain itu, terdapatversi sejarah terkait kendaraan air 'Perahu Bandung', yakni dua perahu yang diikat berdampingan. Perahu ini digunakan oleh Bupati Bandung, R.A. Wiranatakusumah II untuk melayari Sungai Citarum saat mencari lokasi ibukota kabupaten yang baru.",
+                image: "https://images.unsplash.com/photo-1627705191833-289b52a12513?auto=format&fit=crop&q=80&w=800",
+                impactText: "Etimologi ini merefleksikan ikatan kuat antara perkembangan kota dengan kondisi geologis serta filosofi kebersamaan (berdampingan).",
+                impactPoints: [
+                    { title: "Filosofi 'Bendung'", text: "Melambangkan peradaban yang tumbuh dan bertahan di bekas bendungan alam purba." },
+                    { title: "Perahu Bandung", text: "Menjadi simbol perjalanan historis perpindahan pusat pemerintahan awal." }
+                ],
+                figures: [
+                    { name: "R.A. Wiranatakusumah II", role: "Bupati Bandung Ke-6", desc: "Pendiri Kota Bandung yang melakukan penjelajahan dengan Perahu Bandung.", image: "https://images.unsplash.com/photo-1544473244-f6895e69ce8d?auto=format&fit=crop&q=80&w=200" }
+                ],
+                facts: [
+                    { title: "Perahu Bandung", text: "Terdiri dari dua perahu lesung yang dirangkaikan menjadi satu, digunakan melintasi Citarum." }
                 ],
                 gallery: []
             },
