@@ -93,7 +93,7 @@ export default function About() {
             </div>
           </motion.div>
 
-          {/* Right: Abstract UI / Mission */}
+          {/* Right: Smart City Role */}
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
@@ -101,28 +101,35 @@ export default function About() {
             className="relative"
           >
             <div className="aspect-square bg-gradient-to-br from-[#00A8FF]/20 to-transparent rounded-[3rem] border border-white/10 p-12 flex flex-col justify-center">
-              <h2 className="text-3xl font-bold mb-6">Misi KotaDigital</h2>
+              <h2 className="text-3xl font-bold mb-6">Peran Website dalam Smart City</h2>
               <p className="text-slate-500 dark:text-gray-400 mb-8 leading-relaxed">
-                Website ini dibentuk sebagai platform integrasi digital untuk membantu wisatawan mengeksplorasi keindahan Bandung dengan cara yang modern. Kami menggabungkan data histori dengan teknologi AI Planner untuk memberikan pengalaman perjalanan yang personal dan efisien.
+                Platform ini merupakan representasi digital Kota Bandung yang mendukung ekosistem Nusantara Digital City dengan fungsi utama:
               </p>
               <div className="space-y-4">
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-blue-500/20 flex items-center justify-center text-blue-500">
+                  <div className="w-10 h-10 rounded-full bg-blue-500/20 flex items-center justify-center text-blue-500 shrink-0">
                     <ShieldCheck size={20} />
                   </div>
-                  <span className="font-medium">Data Terpercaya & Akurat</span>
+                  <span className="font-medium text-sm">Portal Informasi Kota & Branding</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-indigo-500/20 flex items-center justify-center text-indigo-500">
+                  <div className="w-10 h-10 rounded-full bg-indigo-500/20 flex items-center justify-center text-indigo-500 shrink-0">
                     <Globe size={20} />
                   </div>
-                  <span className="font-medium">Platform Eksplorasi Terpadu</span>
+                  <span className="font-medium text-sm">Panduan Wisata Digital Terpadu</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-full bg-amber-500/20 flex items-center justify-center text-amber-500 shrink-0">
+                    <Sparkles size={20} />
+                  </div>
+                  <span className="font-medium text-sm">Sarana Edukasi & Promosi Daerah</span>
                 </div>
               </div>
             </div>
             {/* Minimal Decorative Ring */}
             <div className="absolute -top-10 -right-10 w-40 h-40 border-2 border-dashed border-[#00A8FF]/20 rounded-full animate-[spin_20s_linear_infinite]" />
           </motion.div>
+
         </div>
       </section>
 
@@ -155,11 +162,12 @@ export default function About() {
             />
             <FeatureCard 
               icon={Layout}
-              title="Buat Rencana Trip"
-              desc="Gunakan fitur AI Planner kami untuk merancang itinerary instan dalam hitungan detik."
+              title="Dashboard Cerdas"
+              desc="Akses berbagai pilar Smart City Bandung mulai dari mobilitas hingga ekonomi digital."
               link="/"
               color="bg-cyan-500"
             />
+
           </div>
         </div>
       </section>

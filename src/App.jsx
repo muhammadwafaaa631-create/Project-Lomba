@@ -22,11 +22,11 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/history" element={<History />} />
-          <Route path="/history/masa-awal" element={<MasaAwal />} />
-          <Route path="/history/pendirian-kota" element={<PendirianKota />} />
-          <Route path="/history/hindia-belanda" element={<HindiaBelanda />} />
-          <Route path="/history/kemerdekaan" element={<Kemerdekaan />} />
-          <Route path="/history/masa-modern" element={<MasaModern />} />
+          <Route path="/history/asal-usul" element={<MasaAwal />} />
+          <Route path="/history/kolonial" element={<HindiaBelanda />} />
+          <Route path="/history/peristiwa-penting" element={<Kemerdekaan />} />
+          <Route path="/history/modern" element={<MasaModern />} />
+
           <Route path="/wisata" element={<Wisata />} />
           <Route path="*" element={
             <div className="flex items-center justify-center min-h-[50vh]">

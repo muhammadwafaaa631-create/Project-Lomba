@@ -11,7 +11,8 @@ export default function MasaModern() {
 
     const content = {
         hero: {
-            subtitle: "Masa Modern",
+            subtitle: "Bandung Modern",
+
             bgImage: "https://images.unsplash.com/photo-1555655523-83262d142b9c?auto=format&fit=crop&q=80&w=2000"
         },
         timeline: [
@@ -77,9 +78,10 @@ export default function MasaModern() {
             }
         ],
         navigation: {
-            prevLink: "/history/kemerdekaan",
-            prevLabel: "Masa Kemerdekaan"
+            prevLink: "/history/peristiwa-penting",
+            prevLabel: "Peristiwa Penting"
         }
+
     };
 
     return <HistoryPageLayout theme={theme} content={content} />;

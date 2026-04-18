@@ -1,38 +1,49 @@
-import { Train, Zap, Shield } from "lucide-react";
+import { Shield, Train, ShoppingBag, Heart } from "lucide-react";
 
 export default function DigitalDashboard() {
   const features = [
     { 
-      title: "Transportasi AI", 
-      desc: "Sistem transportasi publik yang terintegrasi pengelolaannya melalui AI untuk lalu lintas yang efisien.", 
+      title: "Smart Governance", 
+      desc: "Layanan publik digital terintegrasi untuk birokrasi yang cepat, transparan, dan efisien.", 
+      icon: Shield, 
+      progress: "92%" 
+    },
+    { 
+      title: "Smart Mobility", 
+      desc: "Sistem transportasi & infrastruktur cerdas untuk mobilitas warga yang lancar dan terkoneksi.", 
       icon: Train, 
       progress: "85%" 
     },
     { 
-      title: "Energi Terbarukan", 
-      desc: "Pasokan energi yang bergantung pada sumber ramah lingkungan dan termonitor secara real-time.", 
-      icon: Zap, 
-      progress: "60%" 
+      title: "Smart Economy", 
+      desc: "Pemberdayaan UMKM & ekonomi kreatif melalui platform digital guna meningkatkan ekonomi daerah.", 
+      icon: ShoppingBag, 
+      progress: "78%" 
     },
     { 
-      title: "Layanan Publik", 
-      desc: "Akses birokrasi dan layanan darurat terpadu yang meminimalisir waktu tunggu penduduk.", 
-      icon: Shield, 
-      progress: "92%" 
+      title: "Smart Living", 
+      desc: "Peningkatan kualitas hidup & lingkungan melalui teknologi ramah lingkungan dan sanitasi cerdas.", 
+      icon: Heart, 
+      progress: "60%" 
     }
   ];
 
+
   return (
-    <section className="py-16 bg-[#FDFBF7] dark:bg-[#0B1120] px-6 transition-colors duration-700">
+    <section id="innovation" className="py-24 bg-[#FDFBF7] dark:bg-[#0B1120] px-6 transition-colors duration-700">
       <div className="max-w-7xl mx-auto">
-        <div className="flex justify-between items-center mb-8">
-          <h2 className="text-2xl font-bold text-slate-900 dark:text-white">Fitur Smart City</h2>
-          <button className="text-[10px] uppercase tracking-wider font-bold text-[#00A8FF] bg-[#00A8FF]/10 px-4 py-2 rounded-full border border-[#00A8FF]/30 hover:bg-[#00A8FF]/20 transition">
-            Lihat Semua
+        <div className="flex flex-col md:flex-row justify-between items-center mb-12">
+          <div>
+            <h2 className="text-3xl font-bold text-slate-900 dark:text-white mb-2">Inovasi Digital Bandung</h2>
+            <p className="text-slate-500 dark:text-gray-400 text-sm">Empat pilar utama transformasi digital menuju Nusantara Digital City.</p>
+          </div>
+          <button className="hidden md:block text-[10px] uppercase tracking-wider font-bold text-[#00A8FF] bg-[#00A8FF]/10 px-4 py-2 rounded-full border border-[#00A8FF]/30 hover:bg-[#00A8FF]/20 transition mt-4 md:mt-0">
+            Lihat Dashboard Kota
           </button>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+
           {features.map((feat, idx) => {
             const Icon = feat.icon;
             return (

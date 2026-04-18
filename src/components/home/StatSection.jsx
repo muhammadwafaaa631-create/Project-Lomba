@@ -5,37 +5,38 @@ import { Users, Map, Layout, Sparkles } from "lucide-react";
 const STATS = [
   { 
     id: 1, 
-    label: "Pengunjung", 
-    value: 1200, 
-    suffix: "+", 
+    label: "Penduduk", 
+    value: 2.5, 
+    suffix: " Juta", 
     icon: Users,
     color: "from-blue-500 to-cyan-400"
   },
   { 
     id: 2, 
-    label: "Tempat Wisata", 
-    value: 150, 
-    suffix: "+", 
+    label: "Wilayah", 
+    value: 167, 
+    suffix: " km²", 
     icon: Map,
     color: "from-blue-600 to-indigo-500"
   },
   { 
     id: 3, 
-    label: "Rencana Dibuat", 
-    value: 850, 
-    suffix: "+", 
+    label: "Kota Kreatif", 
+    value: 1, 
+    suffix: " UNESCO", 
     icon: Layout,
     color: "from-indigo-600 to-purple-500"
   },
   { 
     id: 4, 
-    label: "Destinasi Populer", 
-    value: 45, 
-    suffix: "+", 
+    label: "Pusat Inovasi", 
+    value: 1, 
+    suffix: " JABAR", 
     icon: Sparkles,
     color: "from-cyan-500 to-blue-500"
   }
 ];
+
 
 export default function StatSection() {
   return (
@@ -61,7 +62,10 @@ function StatCard({ stat, index }) {
   
   // Count up animation logic
   const spring = useSpring(0, { stiffness: 40, damping: 20 });
-  const displayValue = useTransform(spring, (current) => Math.floor(current));
+  const displayValue = useTransform(spring, (current) => 
+    current % 1 === 0 ? Math.floor(current) : current.toFixed(1)
+  );
+
 
   useEffect(() => {
     if (isInView) {

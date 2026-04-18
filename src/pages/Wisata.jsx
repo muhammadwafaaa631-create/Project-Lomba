@@ -12,7 +12,7 @@ export default function Wisata() {
   const [activeCategory, setActiveCategory] = useState("Semua");
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedDest, setSelectedDest] = useState(null);
-  const [isModalOpen, setIsModalOpen] = useState(false);
+
 
 
   // Get search from URL params if present
@@ -26,21 +26,31 @@ export default function Wisata() {
     }
   }, [location.search]);
 
-  const categories = ["Semua", "Viral", "Alam", "Budaya", "Kuliner", "Sejarah", "Hiburan"];
+  const categories = ["Semua", "Alam", "Kuliner", "Edukasi", "Hiburan"];
+
 
   const filteredDestinations = useMemo(() => {
     return ALL_DESTINATIONS.filter((dest) => {
-      const matchCategory = activeCategory === "Semua" || dest.category === activeCategory;
+      // Map existing categories to requested ones
+      const mappedCategory = (cat) => {
+        if (cat === "Sejarah" || cat === "Budaya") return "Edukasi";
+        if (cat === "Viral") return "Hiburan";
+        return cat;
+      };
+
+      const matchCategory = activeCategory === "Semua" || mappedCategory(dest.category) === activeCategory;
       const matchSearch = dest.name.toLowerCase().includes(searchQuery.toLowerCase()) || 
                           dest.description.toLowerCase().includes(searchQuery.toLowerCase());
       return matchCategory && matchSearch;
     });
   }, [activeCategory, searchQuery]);
 
-  const handleBooking = (dest) => {
-    setSelectedDest(dest);
-    setIsModalOpen(true);
+  const handleInfo = (dest) => {
+    if (dest.bookingUrl) {
+      window.open(dest.bookingUrl, '_blank');
+    }
   };
+
 
 
   return (
@@ -130,10 +140,10 @@ export default function Wisata() {
                       <span className="text-blue-600 dark:text-[#0092E4] font-bold">{dest.price}</span>
                     </div>
                     <button 
-                      onClick={() => handleBooking(dest)}
+                      onClick={() => handleInfo(dest)}
                       className="text-sm font-bold bg-gray-900 dark:bg-white text-white dark:text-gray-900 px-4 py-2 rounded-xl flex items-center gap-2 group/btn hover:scale-105 transition-all shadow-lg shadow-black/10 dark:shadow-white/5"
                     >
-                      Pesan <Calendar size={14} />
+                      Informasi <ExternalLink size={14} />
                     </button>
                   </div>
 
@@ -143,6 +153,7 @@ export default function Wisata() {
           </AnimatePresence>
         </motion.div>
 
+
         {filteredDestinations.length === 0 && (
           <div className="text-center py-20">
             <Search size={48} className="mx-auto opacity-20 mb-4" />
@@ -151,13 +162,6 @@ export default function Wisata() {
           </div>
         )}
       </div>
-
-      <BookingModal 
-        isOpen={isModalOpen}
-        onClose={() => setIsModalOpen(false)}
-        destination={selectedDest}
-      />
     </div>
-
   );
 }

@@ -13,9 +13,10 @@ export default function MasaAwal() {
 
     const content = {
         hero: {
-            subtitle: "Masa Awal",
+            subtitle: "Asal-usul Nama Bandung",
             bgImage: "https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&q=80&w=2000"
         },
+
         timeline: [
             {
                 year: "Purba",
@@ -83,9 +84,10 @@ export default function MasaAwal() {
             }
         ],
         navigation: {
-            nextLink: "/history/pendirian-kota",
-            nextLabel: "Pendirian Kota"
+            nextLink: "/history/kolonial",
+            nextLabel: "Masa Kolonial"
         }
+
     };
 
     return <HistoryPageLayout theme={theme} content={content} />;

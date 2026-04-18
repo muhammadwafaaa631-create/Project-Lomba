@@ -238,7 +238,32 @@ const HistoryPageLayout = ({
                         )}
                     </motion.div>
                 </AnimatePresence>
+
+                {/* Visit History CTA */}
+                <motion.div 
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    className="max-w-4xl mx-auto px-6 mt-32 text-center"
+                >
+                    <div className="bg-gradient-to-br from-blue-600 to-indigo-700 rounded-[3rem] p-12 overflow-hidden relative group">
+                        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1549473889-14f410d83298?q=80&w=1200')] bg-cover bg-center opacity-10 group-hover:scale-110 transition-transform duration-[5s]" />
+                        <div className="relative z-10">
+                            <h3 className="text-3xl md:text-4xl font-black text-white mb-6">Rasakan Sejarahnya Secara Langsung</h3>
+                            <p className="text-blue-100 mb-10 text-lg font-light max-w-xl mx-auto leading-relaxed">
+                                Banyak lokasi bersejarah ini masih terjaga dan dapat dikunjungi sekarang. Jelajahi peta wisata sejarah kami.
+                            </p>
+                            <Link 
+                                to="/wisata"
+                                className="inline-flex items-center gap-3 bg-white text-blue-600 px-10 py-4 rounded-full font-bold shadow-2xl hover:bg-blue-50 transition-all hover:-translate-y-1"
+                            >
+                                Kunjungi Lokasi Bersejarah Ini <MapPin size={20} />
+                            </Link>
+                        </div>
+                    </div>
+                </motion.div>
             </main>
+
 
             {/* 4. FOOTER NAVIGATION */}
             <footer className="py-24 border-t border-slate-200 dark:border-white/5 px-6 bg-slate-50 dark:bg-black transition-colors duration-700">

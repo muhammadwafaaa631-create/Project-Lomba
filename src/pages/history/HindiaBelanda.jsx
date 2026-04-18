@@ -11,7 +11,8 @@ export default function HindiaBelanda() {
 
     const content = {
         hero: {
-            subtitle: "Hindia Belanda",
+            subtitle: "Masa Kolonial",
+
             bgImage: "https://images.unsplash.com/photo-1596431940175-3bb7242c163b?auto=format&fit=crop&q=80&w=2000"
         },
         timeline: [
@@ -77,11 +78,12 @@ export default function HindiaBelanda() {
             }
         ],
         navigation: {
-            prevLink: "/history/pendirian-kota",
-            prevLabel: "Pendirian Kota",
-            nextLink: "/history/kemerdekaan",
-            nextLabel: "Masa Kemerdekaan"
+            prevLink: "/history/asal-usul",
+            prevLabel: "Asal-usul",
+            nextLink: "/history/peristiwa-penting",
+            nextLabel: "Peristiwa Penting"
         }
+
     };
 
     return <HistoryPageLayout theme={theme} content={content} />;

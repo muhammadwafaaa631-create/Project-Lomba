@@ -11,7 +11,8 @@ export default function Kemerdekaan() {
 
     const content = {
         hero: {
-            subtitle: "Masa Kemerdekaan",
+            subtitle: "Peristiwa Penting",
+
             bgImage: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&q=80&w=2000"
         },
         timeline: [
@@ -77,11 +78,12 @@ export default function Kemerdekaan() {
             }
         ],
         navigation: {
-            prevLink: "/history/hindia-belanda",
-            prevLabel: "Hindia Belanda",
-            nextLink: "/history/masa-modern",
-            nextLabel: "Masa Modern"
+            prevLink: "/history/kolonial",
+            prevLabel: "Masa Kolonial",
+            nextLink: "/history/modern",
+            nextLabel: "Bandung Modern"
         }
+
     };
 
     return <HistoryPageLayout theme={theme} content={content} />;

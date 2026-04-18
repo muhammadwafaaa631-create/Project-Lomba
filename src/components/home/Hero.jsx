@@ -69,18 +69,19 @@ export default function Hero() {
           </motion.div>
 
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight leading-[1.1] mb-6">
-            Eksplorasi
+            Bandung Menuju
             <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00A8FF] to-[#0047FF]">
-              Gaya Hidup
+              Smart City
             </span>
             <br />
-            Masa Depan
+            Modern
           </h1>
 
           <p className="text-lg md:text-xl text-slate-600 dark:text-gray-400 font-light max-w-lg mb-10 leading-relaxed">
-            Menyelami keindahan budaya, sejarah, dan pariwisata dalam satu platform digital yang terintegrasi penuh.
+            Eksplorasi informasi, sejarah, budaya, dan perkembangan digital kota Bandung dalam satu platform.
           </p>
+
 
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
@@ -89,14 +90,22 @@ export default function Hero() {
             className="flex flex-wrap gap-4 w-full"
           >
             <Link 
-              to="/wisata"
+              to="#smart-city"
+              onClick={(e) => {
+                e.preventDefault();
+                document.getElementById('smart-city')?.scrollIntoView({ behavior: 'smooth' });
+              }}
               className="bg-gradient-to-r from-[#0092E4] to-[#007ABF] text-white px-8 py-3.5 rounded-full font-semibold shadow-[0_0_20px_rgba(0,168,255,0.3)] hover:shadow-[0_0_30px_rgba(0,168,255,0.5)] transition-all hover:-translate-y-1 block text-center"
             >
-              Mulai Petualangan
+              Jelajahi Sekarang
             </Link>
-            <button className="bg-slate-900/5 dark:bg-white/5 backdrop-blur-md text-slate-900 dark:text-white px-8 py-3.5 border border-slate-900/10 dark:border-white/10 rounded-full font-semibold hover:bg-slate-900/10 dark:hover:bg-white/10 transition-all hover:border-[#0092E4]/50">
+            <Link 
+              to="/about"
+              className="bg-slate-900/5 dark:bg-white/5 backdrop-blur-md text-slate-900 dark:text-white px-8 py-3.5 border border-slate-900/10 dark:border-white/10 rounded-full font-semibold hover:bg-slate-900/10 dark:hover:bg-white/10 transition-all hover:border-[#0092E4]/50"
+            >
               Pelajari Fitur
-            </button>
+            </Link>
+
           </motion.div>
           
           {/* Quick Stats */}

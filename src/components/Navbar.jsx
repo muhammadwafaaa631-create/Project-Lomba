@@ -34,12 +34,12 @@ export default function Navbar() {
       name: "History", 
       path: "/history",
       subLinks: [
-        { name: "Masa Awal", path: "/history/masa-awal" },
-        { name: "Pendirian Kota", path: "/history/pendirian-kota" },
-        { name: "Hindia Belanda", path: "/history/hindia-belanda" },
-        { name: "Kemerdekaan", path: "/history/kemerdekaan" },
-        { name: "Masa Modern", path: "/history/masa-modern" },
+        { name: "Asal-usul Nama Bandung", path: "/history/asal-usul" },
+        { name: "Masa Kolonial", path: "/history/kolonial" },
+        { name: "Peristiwa Penting", path: "/history/peristiwa-penting" },
+        { name: "Bandung Modern", path: "/history/modern" },
       ]
+
     },
     { name: "Wisata", path: "/wisata" },
     { name: "About", path: "/about" },
