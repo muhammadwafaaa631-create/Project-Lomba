@@ -9,7 +9,9 @@ export const ALL_DESTINATIONS = [
     rating: 4.8,
     image: "https://images.unsplash.com/photo-1549473889-14f410d83298?q=80&w=1200",
     tag: "Populer",
-    bookingUrl: "https://www.traveloka.com/id-id/activities/indonesia/product/kawah-putih-ciwidey-tickets-2000344464523"
+    bookingUrl: "https://www.traveloka.com/id-id/activities/indonesia/product/kawah-putih-ciwidey-tickets-2000344464523",
+    mapX: 15,
+    mapY: 25
   },
   {
     id: 2,
@@ -21,7 +23,9 @@ export const ALL_DESTINATIONS = [
     rating: 4.7,
     image: "https://images.unsplash.com/photo-1512403754473-27835f7b9984?q=80&w=1200",
     tag: "Ikon Kota",
-    bookingUrl: "https://www.indonesia.travel/gb/en/destinations/java/bandung/gedung-sate.html"
+    bookingUrl: "https://www.indonesia.travel/gb/en/destinations/java/bandung/gedung-sate.html",
+    mapX: 67,
+    mapY: 63
   },
   {
     id: 9,
@@ -33,7 +37,9 @@ export const ALL_DESTINATIONS = [
     rating: 4.7,
     image: "https://ik.imagekit.io/tvlk/xpe-asset/orchid-forest.jpg",
     tag: "Viral",
-    bookingUrl: "https://www.traveloka.com/id-id/activities/indonesia/product/orchid-forest-cikole-tickets-2000287556094"
+    bookingUrl: "https://www.traveloka.com/id-id/activities/indonesia/product/orchid-forest-cikole-tickets-2000287556094",
+    mapX: 49,
+    mapY: 36
   },
   {
     id: 16,
@@ -45,7 +51,9 @@ export const ALL_DESTINATIONS = [
     rating: 4.4,
     image: "https://ik.imagekit.io/tvlk/xpe-asset/sarae-hills.jpg",
     tag: "Viral",
-    bookingUrl: "https://www.traveloka.com/id-id/activities/indonesia/product/sarae-hills-tickets-2006859363068"
+    bookingUrl: "https://www.traveloka.com/id-id/activities/indonesia/product/sarae-hills-tickets-2006859363068",
+    mapX: 31,
+    mapY: 74
   },
   {
     id: 20,
@@ -57,7 +65,9 @@ export const ALL_DESTINATIONS = [
     rating: 4.8,
     image: "https://ik.imagekit.io/tvlk/xpe-asset/trans-studio-bandung.jpg",
     tag: "Populer",
-    bookingUrl: "https://www.traveloka.com/id-id/activities/indonesia/product/trans-studio-bandung-tickets-5863700815747"
+    bookingUrl: "https://www.traveloka.com/id-id/activities/indonesia/product/trans-studio-bandung-tickets-5863700815747",
+    mapX: 83,
+    mapY: 47
   },
   {
     id: 21,
@@ -69,7 +79,9 @@ export const ALL_DESTINATIONS = [
     rating: 4.7,
     image: "https://ik.imagekit.io/tvlk/xpe-asset/lembang-park-zoo.jpg",
     tag: "Keluarga",
-    bookingUrl: "https://www.traveloka.com/id-id/activities/indonesia/product/lembang-park-and-zoo-3908689355733"
+    bookingUrl: "https://www.traveloka.com/id-id/activities/indonesia/product/lembang-park-and-zoo-3908689355733",
+    mapX: 65,
+    mapY: 20
   },
   {
     id: 23,
@@ -81,7 +93,9 @@ export const ALL_DESTINATIONS = [
     rating: 4.9,
     image: "https://ik.imagekit.io/tvlk/xpe-asset/wahoo-waterworld.jpg",
     tag: "Viral",
-    bookingUrl: "https://www.traveloka.com/id-id/activities/indonesia/product/wahoo-waterworld-8732827930073"
+    bookingUrl: "https://www.traveloka.com/id-id/activities/indonesia/product/wahoo-waterworld-8732827930073",
+    mapX: 47,
+    mapY: 58
   },
   {
     id: 24,
@@ -93,7 +107,9 @@ export const ALL_DESTINATIONS = [
     rating: 4.6,
     image: "https://ik.imagekit.io/tvlk/xpe-asset/great-asia-africa.jpg",
     tag: "Viral",
-    bookingUrl: "https://www.traveloka.com/id-id/activities/indonesia/product/the-great-asia-africa-tickets"
+    bookingUrl: "https://www.traveloka.com/id-id/activities/indonesia/product/the-great-asia-africa-tickets",
+    mapX: 29,
+    mapY: 31
   },
   {
     id: 25,
@@ -105,7 +121,9 @@ export const ALL_DESTINATIONS = [
     rating: 4.5,
     image: "https://ik.imagekit.io/tvlk/xpe-asset/farmhouse-lembang.jpg",
     tag: "Keluarga",
-    bookingUrl: "https://www.traveloka.com/id-id/activities/indonesia/product/farmhouse-lembang-tickets"
+    bookingUrl: "https://www.traveloka.com/id-id/activities/indonesia/product/farmhouse-lembang-tickets",
+    mapX: 81,
+    mapY: 69
   },
   {
     id: 26,
@@ -117,7 +135,9 @@ export const ALL_DESTINATIONS = [
     rating: 4.7,
     image: "https://ik.imagekit.io/tvlk/xpe-asset/floating-market.jpg",
     tag: "Populer",
-    bookingUrl: "https://www.traveloka.com/id-id/activities/indonesia/product/ticket-floating-market-lembang-2000929323863"
+    bookingUrl: "https://www.traveloka.com/id-id/activities/indonesia/product/ticket-floating-market-lembang-2000929323863",
+    mapX: 63,
+    mapY: 42
   },
   {
     id: 27,
@@ -129,7 +149,9 @@ export const ALL_DESTINATIONS = [
     rating: 4.4,
     image: "https://ik.imagekit.io/tvlk/xpe-asset/dago-dreampark.jpg",
     tag: "Adventure",
-    bookingUrl: "https://www.traveloka.com/id-id/activities/indonesia/product/tiket-dago-dreampark-bandung"
+    bookingUrl: "https://www.traveloka.com/id-id/activities/indonesia/product/tiket-dago-dreampark-bandung",
+    mapX: 45,
+    mapY: 15
   },
   {
     id: 28,
@@ -141,7 +163,9 @@ export const ALL_DESTINATIONS = [
     rating: 4.6,
     image: "https://ik.imagekit.io/tvlk/xpe-asset/lembah-dewata.jpg",
     tag: "Santai",
-    bookingUrl: "https://www.traveloka.com/id-id/activities/indonesia/product/taman-lembah-dewata-voucher-4849572966015"
+    bookingUrl: "https://www.traveloka.com/id-id/activities/indonesia/product/taman-lembah-dewata-voucher-4849572966015",
+    mapX: 27,
+    mapY: 53
   },
   {
     id: 29,
@@ -153,7 +177,9 @@ export const ALL_DESTINATIONS = [
     rating: 4.9,
     image: "https://ik.imagekit.io/tvlk/xpe-asset/saung-angklung-udjo.jpg",
     tag: "Budaya",
-    bookingUrl: "https://www.traveloka.com/id-id/activities/indonesia/product/tiket-saung-angklung-udjo-2000858975309"
+    bookingUrl: "https://www.traveloka.com/id-id/activities/indonesia/product/tiket-saung-angklung-udjo-2000858975309",
+    mapX: 79,
+    mapY: 26
   },
   {
     id: 30,
@@ -165,7 +191,9 @@ export const ALL_DESTINATIONS = [
     rating: 4.8,
     image: "https://ik.imagekit.io/tvlk/xpe-asset/rafting-pangalengan.jpg",
     tag: "Aksi",
-    bookingUrl: "https://www.traveloka.com/id-id/activities/indonesia/product/pangalengan-rafting-pt-moluccas-indonesia-jaya-3822044615557"
+    bookingUrl: "https://www.traveloka.com/id-id/activities/indonesia/product/pangalengan-rafting-pt-moluccas-indonesia-jaya-3822044615557",
+    mapX: 61,
+    mapY: 64
   },
   {
     id: 31,
@@ -177,7 +205,9 @@ export const ALL_DESTINATIONS = [
     rating: 4.5,
     image: "https://ik.imagekit.io/tvlk/xpe-asset/AyJ9ocw3Wj76H7J29E49D3/ad9j93u8jk/joy-n-fun-ciwalk.jpg",
     tag: "Anak",
-    bookingUrl: "https://www.traveloka.com/id-id/activities/indonesia/product/joy-n-fun-cihampelas-walk-7788910411223"
+    bookingUrl: "https://www.traveloka.com/id-id/activities/indonesia/product/joy-n-fun-cihampelas-walk-7788910411223",
+    mapX: 43,
+    mapY: 37
   },
   {
     id: 32,
@@ -189,7 +219,9 @@ export const ALL_DESTINATIONS = [
     rating: 4.7,
     image: "https://ik.imagekit.io/tvlk/xpe-asset/kidzooona-tsm.jpg",
     tag: "Anak",
-    bookingUrl: "https://www.traveloka.com/id-id/activities/indonesia/product/kidzooona-safari-tsm-bandung-tickets"
+    bookingUrl: "https://www.traveloka.com/id-id/activities/indonesia/product/kidzooona-safari-tsm-bandung-tickets",
+    mapX: 25,
+    mapY: 75
   },
   {
     id: 33,
@@ -201,7 +233,9 @@ export const ALL_DESTINATIONS = [
     rating: 4.6,
     image: "https://ik.imagekit.io/tvlk/xpe-asset/gracia-spa.jpg",
     tag: "Relaksasi",
-    bookingUrl: "https://www.traveloka.com/id-id/activities/indonesia/product/gracia-spa-hot-spring-pool-8697062272337"
+    bookingUrl: "https://www.traveloka.com/id-id/activities/indonesia/product/gracia-spa-hot-spring-pool-8697062272337",
+    mapX: 77,
+    mapY: 48
   },
   {
     id: 34,
@@ -213,7 +247,9 @@ export const ALL_DESTINATIONS = [
     rating: 4.7,
     image: "https://ik.imagekit.io/tvlk/xpe-asset/rumah-guguk.jpg",
     tag: "Pet Friendly",
-    bookingUrl: "https://www.traveloka.com/id-id/activities/indonesia/product/ticket-to-rumah-guguk-2001437522979"
+    bookingUrl: "https://www.traveloka.com/id-id/activities/indonesia/product/ticket-to-rumah-guguk-2001437522979",
+    mapX: 59,
+    mapY: 21
   },
   {
     id: 35,
@@ -225,7 +261,9 @@ export const ALL_DESTINATIONS = [
     rating: 4.5,
     image: "https://ik.imagekit.io/tvlk/xpe-asset/snow-park-panama.jpg",
     tag: "Dingin",
-    bookingUrl: "https://www.traveloka.com/id-id/activities/indonesia/product/snow-park-at-panama-park-bandung"
+    bookingUrl: "https://www.traveloka.com/id-id/activities/indonesia/product/snow-park-at-panama-park-bandung",
+    mapX: 41,
+    mapY: 59
   },
   {
     id: 36,
@@ -237,7 +275,9 @@ export const ALL_DESTINATIONS = [
     rating: 4.7,
     image: "https://images.unsplash.com/photo-1610484042894-3234d72f9d65?q=80&w=1200",
     tag: "Populer",
-    bookingUrl: "https://www.traveloka.com/id-id/activities/indonesia/product/tangkuban-perahu-tickets"
+    bookingUrl: "https://www.traveloka.com/id-id/activities/indonesia/product/tangkuban-perahu-tickets",
+    mapX: 23,
+    mapY: 32
   },
   {
     id: 37,
@@ -249,7 +289,9 @@ export const ALL_DESTINATIONS = [
     rating: 4.8,
     image: "https://ik.imagekit.io/tvlk/xpe-asset/kawah-putih-tour.jpg",
     tag: "Viral",
-    bookingUrl: "https://www.traveloka.com/id-id/activities/indonesia/product/hutan-menyala-tickets-2006859363060"
+    bookingUrl: "https://www.traveloka.com/id-id/activities/indonesia/product/hutan-menyala-tickets-2006859363060",
+    mapX: 75,
+    mapY: 70
   },
   {
     id: 38,
@@ -261,7 +303,9 @@ export const ALL_DESTINATIONS = [
     rating: 4.6,
     image: "https://ik.imagekit.io/tvlk/xpe-asset/timezone-summarecon.jpg",
     tag: "Viral",
-    bookingUrl: "https://www.instagram.com/sudutpandang.bdg/"
+    bookingUrl: "https://www.instagram.com/sudutpandang.bdg/",
+    mapX: 57,
+    mapY: 43
   },
   {
     id: 39,
@@ -273,7 +317,9 @@ export const ALL_DESTINATIONS = [
     rating: 4.6,
     image: "https://ik.imagekit.io/tvlk/xpe-asset/sarae-hills.jpg",
     tag: "Viral",
-    bookingUrl: "https://pergiculiner.com/restaurants/bandung/mercusuar-cafe-and-resto"
+    bookingUrl: "https://pergiculiner.com/restaurants/bandung/mercusuar-cafe-and-resto",
+    mapX: 39,
+    mapY: 16
   },
   {
     id: 40,
@@ -285,6 +331,8 @@ export const ALL_DESTINATIONS = [
     rating: 4.7,
     image: "https://images.unsplash.com/photo-1626214349789-9a674400fd92?q=80&w=1200",
     tag: "Ikonik",
-    bookingUrl: "https://pergiculiner.com/restaurants/bandung/braga"
+    bookingUrl: "https://pergiculiner.com/restaurants/bandung/braga",
+    mapX: 21,
+    mapY: 54
   }
 ];
