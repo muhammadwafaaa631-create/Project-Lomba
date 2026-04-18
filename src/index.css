@@ -1,0 +1,28 @@
+@import "tailwindcss";
+@custom-variant dark (&:is(.dark *));
+
+@layer base {
+  :root {
+    --bg-light: #FDFBF7;
+    --bg-dark: #0B1120;
+    --text-light: #0F172A;
+    --text-dark: #F8FAFC;
+  }
+
+  html {
+    @apply transition-colors duration-700;
+  }
+
+  body {
+    @apply transition-colors duration-700 bg-[var(--bg-light)] text-[var(--text-light)] dark:bg-[var(--bg-dark)] dark:text-[var(--text-dark)];
+  }
+}
+
+/* Custom Scrollbar */
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+/* Base Transitions */
+* {
+  @apply transition-colors duration-700;
+}
