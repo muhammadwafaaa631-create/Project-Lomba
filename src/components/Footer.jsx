@@ -23,7 +23,7 @@ export default function Footer() {
                 </nav>
 
                 {/* Social Icons */}
-                <div className="flex items-center gap-4 text-gray-400">
+                <div className="flex items-center gap-4 text-black-400">
                    <a href="#" className="hover:text-[#00A8FF] transition-colors p-2 bg-white/5 rounded-full hover:bg-[#0092E4]/10">
                      <Globe size={16} />
                    </a>
