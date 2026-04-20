@@ -24,13 +24,13 @@ export default function Footer() {
 
                 {/* Social Icons */}
                 <div className="flex items-center gap-4 text-black-400">
-                   <a href="#" className="hover:text-[#00A8FF] transition-colors p-2 bg-white/5 rounded-full hover:bg-[#0092E4]/10">
+                   <a href="#" className="hover:text-[#00A8FF] transition-colors p-2 bg-slate-100 dark:bg-white/5 rounded-full hover:bg-[#0092E4]/10">
                      <Globe size={16} />
                    </a>
-                   <a href="#" className="hover:text-[#00A8FF] transition-colors p-2 bg-white/5 rounded-full hover:bg-[#0092E4]/10">
+                   <a href="#" className="hover:text-[#00A8FF] transition-colors p-2 bg-slate-100 dark:bg-white/5 rounded-full hover:bg-[#0092E4]/10">
                      <MessageCircle size={16} />
                    </a>
-                   <a href="#" className="hover:text-[#00A8FF] transition-colors p-2 bg-white/5 rounded-full hover:bg-[#0092E4]/10">
+                   <a href="#" className="hover:text-[#00A8FF] transition-colors p-2 bg-slate-100 dark:bg-white/5 rounded-full hover:bg-[#0092E4]/10">
                      <Code2 size={16} />
                    </a>
                 </div>
