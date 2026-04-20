@@ -3,15 +3,14 @@ import StatSection from "../components/home/StatSection";
 import TripPlanner from "../components/home/TripPlanner";
 import PreferenceSelector from "../components/home/PreferenceSelector";
 import CitySnapshot from "../components/home/CitySnapshot";
-import Destinations from "../components/home/Destinations";
+
 import CulinaryCulture from "../components/home/CulinaryCulture";
 import DigitalDashboard from "../components/home/DigitalDashboard";
 import Storytelling from "../components/home/Storytelling";
 import CallToAction from "../components/home/CallToAction";
 import WeatherWidget from "../components/home/WeatherWidget";
 import SmartCityIntro from "../components/home/SmartCityIntro";
-import HomeHighlights from "../components/home/HomeHighlights";
-import ExploreBandung from "../components/home/ExploreBandung";
+
 import { useTheme } from "../context/ThemeContext";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -94,13 +93,13 @@ export default function Home() {
                 
                 <div className="relative z-10 w-full flex flex-col pt-16 mt-12 drop-shadow-sm bg-[#FDFBF7] dark:bg-[#030303] rounded-t-[3rem] 2xl:rounded-t-[4rem] shadow-2xl transition-colors duration-700 border-t border-slate-200 dark:border-white/5 pb-24">
                     <StatSection />
-                    <ExploreBandung />
+
                     
                     <SmartCityIntro />
-                    <HomeHighlights />
+
                     
                     <CitySnapshot />
-                    <Destinations />
+
                     <CulinaryCulture />
                     <DigitalDashboard />
                     <CallToAction />

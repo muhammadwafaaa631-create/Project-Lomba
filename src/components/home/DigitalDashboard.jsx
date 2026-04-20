@@ -7,14 +7,16 @@ export default function DigitalDashboard() {
       desc: "Super App resmi Kota Bandung yang menyatukan seluruh layanan publik dalam satu genggaman.", 
       icon: Shield, 
       action: "Buka Aplikasi",
+      link: "https://play.google.com/store/apps/details?id=gov.bdg.smartcitybdg&hl=id",
       color: "text-blue-500",
       bgScale: "w-[85%]" 
     },
     { 
-      title: "Sapa Warga", 
+      title: "Aduan Warga", 
       desc: "Platform interaksi dan pengaduan warga secara langsung kepada pemerintah secara cepat dan transparan.", 
       icon: Heart, 
       action: "Lapor Sekarang",
+      link: "https://jabarprov.go.id/layanan/aduanwarga",
       color: "text-emerald-500",
       bgScale: "w-[95%]"
     },
@@ -23,6 +25,7 @@ export default function DigitalDashboard() {
       desc: "Pantau kondisi arus lalu lintas Kota Bandung secara real-time di berbagai persimpangan jalan.", 
       icon: Train, 
       action: "Lihat Pantauan",
+      link: "https://pelindung.bandung.go.id/",
       color: "text-amber-500",
       bgScale: "w-[100%]"
     },
@@ -31,6 +34,7 @@ export default function DigitalDashboard() {
       desc: "Layanan bebas pulsa 24 jam untuk penanganan kegawatdaruratan medis, medis, bencana dan keamanan.", 
       icon: Shield, 
       action: "Hubungi 112",
+      link: "tel:112",
       color: "text-red-500",
       bgScale: "w-[100%]"
     }
@@ -64,9 +68,14 @@ export default function DigitalDashboard() {
                 </div>
                 
                 <div className="mt-auto">
-                  <button className="w-full py-3 rounded-xl bg-slate-100 dark:bg-white/5 text-slate-900 dark:text-white text-sm font-bold hover:bg-blue-50 hover:text-blue-600 dark:hover:bg-blue-600 dark:hover:text-white transition-all border border-slate-200 dark:border-white/5">
+                  <a 
+                    href={feat.link} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="block w-full py-3 rounded-xl bg-slate-100 dark:bg-white/5 text-slate-900 dark:text-white text-sm text-center font-bold hover:bg-blue-50 hover:text-blue-600 dark:hover:bg-blue-600 dark:hover:text-white transition-all border border-slate-200 dark:border-white/5"
+                  >
                     {feat.action}
-                  </button>
+                  </a>
                 </div>
               </div>
             )

@@ -13,6 +13,8 @@ import MasaModern from "./pages/history/MasaModern";
 import Navbar from "./components/Navbar"
 import Footer from "./components/Footer"
 import IntroScreen from "./components/IntroScreen"
+import Budaya from "./pages/Budaya"
+import BudayaDetail from "./pages/BudayaDetail";
 
 function App() {
   const [introFinished, setIntroFinished] = useState(false);
@@ -35,6 +37,8 @@ function App() {
           <Route path="/history/modern" element={<MasaModern />} />
 
           <Route path="/wisata" element={<Wisata />} />
+          <Route path="/budaya" element={<Budaya />} />
+          <Route path="/budaya/:id" element={<BudayaDetail />} />
           <Route path="*" element={
             <div className="flex items-center justify-center min-h-[50vh]">
               <h1 className="text-3xl md:text-5xl font-bold text-gray-800 dark:text-gray-200">

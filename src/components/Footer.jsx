@@ -3,14 +3,16 @@ import { Globe, MessageCircle, Code2 } from "lucide-react";
 
 export default function Footer() {
     return (
-        <footer className="w-full bg-white dark:bg-[#0B1120] border-t border-slate-200 dark:border-white/5 border-b-4 border-b-[#00A8FF] mt-auto transition-colors duration-700">
+        <footer className="w-full bg-[#FDFBF7] dark:bg-[#030303] border-t border-slate-200 dark:border-white/5 border-b-4 border-b-[#00A8FF] mt-auto transition-colors duration-700 relative z-10">
             <div className="max-w-7xl mx-auto px-6 py-8 flex flex-col md:flex-row items-center justify-between gap-6">
 
                 {/* Brand / Copy */}
-                <div className="flex flex-col items-center md:items-start opacity-80 hover:opacity-100 transition-opacity">
-                    <div className="flex items-center text-xl font-bold tracking-tight mb-2">
-                      <span className="text-slate-900 dark:text-white">Kota</span>
-                      <span className="text-[#00A8FF]">Digital</span>
+                <div className="flex flex-col items-center md:items-start transition-opacity">
+                    <div className="flex items-center gap-3 text-xl font-bold tracking-tight mb-2">
+                      <div className="w-8 h-8 rounded-lg overflow-hidden border border-slate-200 dark:border-white/10 shadow-md">
+                        <img src="/dreamina.jpeg" alt="Logo" className="w-full h-full object-cover" />
+                      </div>
+                      <span className="text-slate-900 dark:text-white">Kota<span className="text-[#00A8FF]">Digital</span></span>
                     </div>
                     <p className="text-xs text-gray-500">© {new Date().getFullYear()} KotaDigital. Hak Cipta Dilindungi.</p>
                 </div>

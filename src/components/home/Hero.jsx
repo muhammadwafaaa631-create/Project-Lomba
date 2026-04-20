@@ -129,7 +129,7 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             transition={{ duration: 1, delay: 0.4 }}
             whileHover={{ scale: 1.02 }}
-            className="relative w-full max-w-[340px] bg-white dark:bg-white/5 backdrop-blur-2xl border border-slate-200 dark:border-white/10 rounded-[2rem] p-8 shadow-2xl overflow-hidden group transition-all duration-700"
+            className="relative w-full max-w-[340px] bg-white dark:bg-white/5 backdrop-blur-2xl border border-slate-200 dark:border-white/10 rounded-[2rem] p-8 shadow-2xl overflow-hidden group transition-all duration-700 lg:-mt-24"
           >
             <div className="absolute inset-0 bg-gradient-to-br from-[#00A8FF]/5 to-transparent transition-opacity group-hover:opacity-20" />
             <div className="relative z-10">
@@ -159,56 +159,7 @@ export default function Hero() {
             <div className="absolute inset-0 border border-slate-200 dark:border-white/5 rounded-[2rem] shadow-[inset_0_0_20px_rgba(255,255,255,0.02)]" />
           </motion.div>
 
-          {/* 2. WEATHER WIDGET */}
-          <motion.div 
-            initial={{ opacity: 0, y: 30, scale: 0.9 }}
-            animate={{ opacity: 1, y: 0, scale: 1 }}
-            transition={{ duration: 1, delay: 0.6 }}
-            whileHover={{ scale: 1.02 }}
-            className="relative w-full max-w-[340px] bg-black/20 backdrop-blur-2xl border border-[#00A8FF]/20 rounded-[2rem] p-8 shadow-[0_0_40px_rgba(0,168,255,0.1)] overflow-hidden group lg:mr-10"
-          >
-            <div className="absolute inset-0 bg-gradient-to-tr from-[#00A8FF]/10 via-transparent to-transparent opacity-40" />
-            
-            <div className="relative z-10">
-              <div className="flex justify-between items-start mb-6">
-                <div>
-                  <h5 className="text-sm font-bold text-white mb-1 tracking-tight">Cuaca Hari Ini</h5>
-                  <p className="text-3xl font-light text-[#00A8FF]">24°C</p>
-                </div>
-                <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-[#00A8FF]/30 to-[#0047FF]/10 flex items-center justify-center text-white shadow-lg">
-                  <CloudSun size={28} className="animate-pulse" />
-                </div>
-              </div>
-              
-              <div className="flex items-center gap-2 mb-6">
-                <span className="px-3 py-1 bg-[#00A8FF]/10 text-[#00A8FF] text-[10px] font-bold rounded-full uppercase tracking-tighter">Cerah Berawan</span>
-                <span className="text-gray-500 text-[10px]">H: 26° L: 21°</span>
-              </div>
 
-              {/* Static Forecast Bars */}
-              <div className="flex gap-2 items-end h-16">
-                 {[40, 60, 85, 55, 75, 90, 65].map((h, i) => (
-                   <div key={i} className="flex-1 bg-white/5 rounded-t-lg relative overflow-hidden group/bar h-full">
-                     <motion.div 
-                       initial={{ height: 0 }}
-                       animate={{ height: `${h}%` }}
-                       transition={{ duration: 1, delay: 0.8 + (i * 0.1) }}
-                       className={`absolute bottom-0 w-full rounded-t-lg transition-all ${i === 2 || i === 5 ? 'bg-[#00A8FF]' : 'bg-white/10'}`}
-                     />
-                   </div>
-                 ))}
-              </div>
-            </div>
-            
-            {/* Decorative Dots Overlay */}
-            <div className="absolute top-0 right-0 p-4 opacity-[0.05] pointer-events-none">
-              <div className="grid grid-cols-4 gap-1">
-                {[...Array(16)].map((_, i) => (
-                  <div key={i} className="w-1 h-1 bg-white rounded-full" />
-                ))}
-              </div>
-            </div>
-          </motion.div>
 
         </div>
       </div>

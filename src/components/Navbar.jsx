@@ -42,6 +42,7 @@ export default function Navbar() {
 
     },
     { name: "Wisata", path: "/wisata" },
+    { name: "Budaya", path: "/budaya" },
     { name: "About", path: "/about" },
   ];
 
@@ -50,9 +51,14 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
         
         {/* Logo */}
-        <Link to="/" className="flex items-center text-xl md:text-2xl font-bold tracking-tight">
-          <span className="text-slate-900 dark:text-white">Kota</span>
-          <span className="text-[#00A8FF]">Digital</span>
+        <Link to="/" className="flex items-center gap-3 text-xl md:text-2xl font-bold tracking-tight group">
+          <div className="w-10 h-10 rounded-xl overflow-hidden border border-white/10 shadow-lg group-hover:scale-110 transition-transform">
+            <img src="/dreamina.jpeg" alt="Logo" className="w-full h-full object-cover" />
+          </div>
+          <div className="flex flex-col leading-none">
+            <span className="text-slate-900 dark:text-white text-lg md:text-xl">Kota</span>
+            <span className="text-[#00A8FF] text-sm md:text-base tracking-[0.2em] uppercase font-black">Digital</span>
+          </div>
         </Link>
 
         {/* Desktop Navigation */}

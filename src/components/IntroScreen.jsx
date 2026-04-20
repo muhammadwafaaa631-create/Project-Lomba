@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Castle } from "lucide-react";
 
 export default function IntroScreen({ onComplete }) {
   const [isVisible, setIsVisible] = useState(true);
@@ -41,9 +40,13 @@ export default function IntroScreen({ onComplete }) {
             {/* Soft Blue Glow */}
             <div className="absolute inset-0 bg-[#00A8FF] blur-[80px] opacity-20 rounded-full w-[150%] h-[150%] left-[-25%] top-[-25%] pointer-events-none" />
             
-            {/* Gedung Sate Icon Representing Bandung */}
-            <div className="relative z-10 w-24 h-24 sm:w-28 sm:h-28 mb-8 flex items-center justify-center bg-white/[0.02] backdrop-blur-3xl rounded-[2rem] border border-white/10 shadow-[0_0_40px_rgba(0,168,255,0.15)] overflow-hidden">
-                <Castle strokeWidth={1.5} className="w-12 h-12 sm:w-14 sm:h-14 text-[#00A8FF]" />
+            {/* Logo Image */}
+            <div className="relative z-10 w-24 h-24 sm:w-32 sm:h-32 mb-8 flex items-center justify-center bg-white/[0.02] backdrop-blur-3xl rounded-[2rem] border border-white/10 shadow-[0_0_40px_rgba(0,168,255,0.15)] overflow-hidden">
+                <img 
+                  src="/dreamina.jpeg" 
+                  alt="Dreamina Logo" 
+                  className="w-full h-full object-cover"
+                />
             </div>
             
             {/* Title & Tagline */}

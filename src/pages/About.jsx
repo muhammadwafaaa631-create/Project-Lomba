@@ -19,7 +19,7 @@ import { CultureSection } from "../components/about/CultureSection";
 
 export default function About() {
   return (
-    <div className="w-full min-h-screen bg-white dark:bg-black text-slate-900 dark:text-white transition-colors duration-700 font-sans selection:bg-[#00A8FF]/30">
+    <div className="w-full min-h-screen bg-[#FDFBF7] dark:bg-[#030303] text-slate-900 dark:text-white transition-colors duration-700 font-sans selection:bg-[#00A8FF]/30">
       
       {/* 1. Hero Section */}
       <section className="relative pt-40 pb-20 px-6 overflow-hidden">

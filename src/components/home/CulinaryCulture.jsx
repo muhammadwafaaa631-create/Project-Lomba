@@ -1,6 +1,7 @@
 import { useRef, useState, useEffect } from 'react';
 import { motion, useScroll, useSpring } from "framer-motion";
 import { ChevronLeft, ChevronRight, Utensils, Star, Clock } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export default function CulinaryAndCulture() {
   const scrollRef = useRef(null);
@@ -9,6 +10,7 @@ export default function CulinaryAndCulture() {
 
   const culinaryItems = [
     { 
+      id: 19,
       title: "Batagor", 
       img: "https://images.unsplash.com/photo-1565557623262-b51c2513a641?q=80&w=800", 
       desc: "Fried fish dumplings with rich savory peanut sauce.",
@@ -17,22 +19,7 @@ export default function CulinaryAndCulture() {
       rating: 4.8
     },
     { 
-      title: "Soto Bandung", 
-      img: "https://images.unsplash.com/photo-1548943487-a2e4142f3fb0?q=80&w=800", 
-      desc: "Beef soup with clear broth, white radish, and fried soybeans.",
-      tag: "Traditional",
-      time: "20 min",
-      rating: 4.7
-    },
-    { 
-      title: "Surabi", 
-      img: "https://images.unsplash.com/photo-1528736235302-52922df5c122?q=80&w=800", 
-      desc: "Warm traditional pancakes cooked on clay charcoal stoves.",
-      tag: "Best Snack",
-      time: "10 min",
-      rating: 4.9
-    },
-    { 
+      id: 20,
       title: "Mie Kocok", 
       img: "https://images.unsplash.com/photo-1574484284002-952d92456975?q=80&w=800", 
       desc: "Flat noodles served in rich beef tendon soup with bean sprouts.",
@@ -41,6 +28,7 @@ export default function CulinaryAndCulture() {
       rating: 4.8
     },
     { 
+      id: 21,
       title: "Seblak", 
       img: "https://images.unsplash.com/photo-1626082872481-22923e597c88?q=80&w=800", 
       desc: "Spicy and savory wet crackers with diversos toppings.",
@@ -49,27 +37,30 @@ export default function CulinaryAndCulture() {
       rating: 4.5
     },
     { 
-      title: "Cireng", 
-      img: "https://images.unsplash.com/photo-1582103567675-7b5182928503?q=80&w=800", 
-      desc: "Chewy fried starch snack with spicy chili vinegar dip.",
-      tag: "Popular",
-      time: "8 min",
-      rating: 4.6
+      id: 22,
+      title: "Surabi", 
+      img: "https://images.unsplash.com/photo-1528736235302-52922df5c122?q=80&w=800", 
+      desc: "Warm traditional pancakes cooked on clay charcoal stoves.",
+      tag: "Best Snack",
+      time: "10 min",
+      rating: 4.9
     },
     { 
-      title: "Tahu Susu", 
-      img: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?q=80&w=800", 
-      desc: "Ultra-soft milky tofu from the highlands of Lembang.",
-      tag: "Healthy",
-      time: "15 min",
+      id: 23,
+      title: "Peuyeum", 
+      img: "https://images.unsplash.com/photo-1584285404554-1590fc981f96?q=80&w=800", 
+      desc: "Sweet and soft fermented cassava traditionally from Bandung.",
+      tag: "Legendary",
+      time: "24h+",
       rating: 4.7
     },
     { 
-      title: "Kopi Tarik", 
-      img: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=800", 
-      desc: "Smooth hand-pulled local coffee with a creamy foam layer.",
-      tag: "Classic",
-      time: "5 min",
+      id: 24,
+      title: "Cuanki", 
+      img: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?q=80&w=800", 
+      desc: "Savory fish balls and dumplings served in warm clear broth.",
+      tag: "Street Food",
+      time: "10 min",
       rating: 4.8
     }
   ];
@@ -212,10 +203,13 @@ export default function CulinaryAndCulture() {
                 <p className="text-slate-500 dark:text-gray-400 leading-relaxed font-medium mb-6">
                   {item.desc}
                 </p>
-                <div className="flex items-center gap-2 text-orange-600 font-bold group-hover:gap-4 transition-all duration-300">
-                  <span>Explore Dish</span>
+                <Link 
+                  to={item.id ? `/budaya/${item.id}` : "/budaya"}
+                  className="flex items-center gap-2 text-orange-600 font-bold group-hover:gap-4 transition-all duration-300"
+                >
+                  <span>Explore Heritage</span>
                   <ChevronRight size={18} />
-                </div>
+                </Link>
               </div>
             </motion.div>
           ))}
