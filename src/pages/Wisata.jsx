@@ -1,4 +1,4 @@
-import { useState, useMemo, useEffect } from "react";
+import { useState, useMemo, useEffect, useRef } from "react";
 import { useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { Search, Map as MapIcon, Coffee, Star, Compass, Mountain, BookOpen, X } from "lucide-react";
@@ -53,6 +53,8 @@ export default function Wisata() {
   const [searchQuery, setSearchQuery] = useState("");
   const [activeMarkerId, setActiveMarkerId] = useState(null);
   const [isBookingOpen, setIsBookingOpen] = useState(false);
+  const [showList, setShowList] = useState(false);
+  const carouselRef = useRef(null);
 
   useEffect(() => {
     // If navigating from other pages with search intent
@@ -143,14 +145,16 @@ export default function Wisata() {
             
             <MapUpdater activeDest={activeDest} />
 
-            {/* Render Markers */}
-            {filteredDestinations.map(dest => (
+             {filteredDestinations.map(dest => (
                <Marker 
                  key={dest.id} 
                  position={dest.position}
                  icon={createCustomIcon(activeMarkerId === dest.id, dest.category === "Viral")}
                  eventHandlers={{
-                   click: () => setActiveMarkerId(dest.id)
+                   click: () => {
+                       setActiveMarkerId(dest.id);
+                       setShowList(false);
+                   }
                  }}
                />
             ))}
@@ -189,8 +193,13 @@ export default function Wisata() {
                   <button 
                     key={cat.name}
                     onClick={() => {
-                        setActiveCategory(cat.name);
-                        setActiveMarkerId(null); // reset selected card on filter
+                        if (activeCategory === cat.name && showList) {
+                            setShowList(false);
+                        } else {
+                            setActiveCategory(cat.name);
+                            setShowList(true);
+                            setActiveMarkerId(null);
+                        }
                     }}
                     className={`flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-bold whitespace-nowrap transition-all shadow-md border ${
                       isActive 
@@ -210,7 +219,7 @@ export default function Wisata() {
 
         {/* 4. Quick Info Card (Layer 1) & 6. Mobile bottom mini card */}
         <AnimatePresence>
-          {activeDest && (
+          {activeDest && !showList && (
             <motion.div
               initial={{ opacity: 0, y: 50, scale: 0.95 }}
               animate={{ opacity: 1, y: 0, scale: 1 }}
@@ -275,6 +284,54 @@ export default function Wisata() {
                     </button>
                   </div>
                 </div>
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
+
+        {/* Small Horizontal List on Filter Click */}
+        <AnimatePresence>
+          {showList && filteredDestinations.length > 0 && !activeMarkerId && (
+            <motion.div 
+              initial={{ y: 200, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              exit={{ y: 200, opacity: 0 }}
+              transition={{ type: "spring", stiffness: 250, damping: 25 }}
+              className="absolute bottom-6 left-0 w-full z-[1000] pointer-events-none"
+            >
+              <div 
+                ref={carouselRef}
+                className="flex overflow-x-auto gap-4 px-6 md:px-12 pb-4 snap-x pointer-events-auto no-scrollbar"
+                style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+              >
+                {filteredDestinations.map((dest) => (
+                  <div
+                    key={dest.id}
+                    onClick={() => {
+                        setActiveMarkerId(dest.id);
+                        setShowList(false);
+                    }}
+                    className="min-w-[240px] w-[240px] snap-center bg-white/95 dark:bg-[#111827]/95 backdrop-blur-xl rounded-[1.5rem] overflow-hidden border border-slate-200 dark:border-white/10 shadow-xl cursor-pointer hover:-translate-y-1 transition-transform flex flex-col shrink-0"
+                  >
+                    <div className="h-28 w-full relative">
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent z-10" />
+                      <img src={dest.image} alt={dest.name} className="w-full h-full object-cover" />
+                      <div className="absolute top-2 right-2 z-20 flex items-center gap-1 bg-black/40 backdrop-blur-md px-1.5 py-0.5 rounded-lg">
+                        <Star size={10} className="fill-yellow-500 text-yellow-500" />
+                        <span className="text-[10px] text-white font-bold">{dest.rating}</span>
+                      </div>
+                      <div className="absolute bottom-2 left-3 z-20">
+                        <h3 className="text-sm font-bold text-white line-clamp-1">{dest.name}</h3>
+                      </div>
+                    </div>
+                    <div className="p-3 flex justify-between items-center bg-slate-50 dark:bg-white/5">
+                      <span className="text-[11px] font-bold text-blue-600 dark:text-blue-400">{dest.price}</span>
+                      <span className={`text-[9px] px-2 py-0.5 rounded uppercase font-bold text-white ${dest.category === "Viral" ? "bg-orange-500" : "bg-blue-500"}`}>
+                        {dest.category}
+                      </span>
+                    </div>
+                  </div>
+                ))}
               </div>
             </motion.div>
           )}
