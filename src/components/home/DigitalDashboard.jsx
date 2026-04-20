@@ -30,7 +30,7 @@ export default function DigitalDashboard() {
 
 
   return (
-    <section id="innovation" className="py-24 bg-[#FDFBF7] dark:bg-[#0B1120] px-6 transition-colors duration-700">
+    <section id="innovation" className="py-24 bg-transparent px-6 transition-colors duration-700">
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-center mb-12">
           <div>
@@ -47,7 +47,7 @@ export default function DigitalDashboard() {
           {features.map((feat, idx) => {
             const Icon = feat.icon;
             return (
-              <div key={idx} className="bg-white dark:bg-[#111827] rounded-2xl p-6 border border-slate-200 dark:border-white/5 hover:border-[#0092E4]/30 transition-all flex flex-col justify-between shadow-sm dark:shadow-none">
+              <div key={idx} className="bg-white/10 dark:bg-white/5 backdrop-blur-md rounded-2xl p-6 border border-white/20 dark:border-white/10 hover:border-[#0092E4]/30 transition-all flex flex-col justify-between shadow-sm dark:shadow-none">
                 <div>
                   <div className="w-10 h-10 rounded-lg bg-slate-900/5 dark:bg-[#ffffff]/5 flex items-center justify-center mb-4 text-[#00A8FF] border border-slate-900/10 dark:border-white/10">
                     <Icon size={20} />

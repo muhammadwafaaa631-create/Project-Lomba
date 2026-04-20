@@ -30,23 +30,13 @@ export default function Hero() {
   };
 
   return (
-    <section className="relative w-full min-h-screen flex items-center justify-center overflow-hidden bg-white dark:bg-black text-slate-900 dark:text-white pt-20 transition-colors duration-700">
+    <section className="relative w-full min-h-screen flex items-center justify-center overflow-hidden bg-transparent text-slate-900 dark:text-white pt-20 transition-colors duration-700">
       
-      {/* 1. Cinematic Video Background */}
-      <div className="absolute inset-0 z-0 overflow-hidden">
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="w-full h-full object-cover opacity-60 scale-105"
-        >
-          <source src="https://assets.mixkit.co/videos/preview/mixkit-night-city-with-traffic-and-illuminated-buildings-1237-large.mp4" type="video/mp4" />
-        </video>
-        
-        {/* Dark/Light Gradient Overlay for Readability */}
-        <div className="absolute inset-0 bg-gradient-to-r from-white via-white/60 to-transparent dark:from-black dark:via-black/60 dark:to-transparent z-[1] transition-all duration-700" />
-        <div className="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent dark:from-black dark:via-transparent dark:to-transparent z-[1] transition-all duration-700" />
+      {/* 1. Cinematic Background Overlays (Content focus) */}
+      <div className="absolute inset-0 z-0">
+        {/* Consistent Gradient Gradients for readability against the dynamic video */}
+        <div className="absolute inset-0 bg-gradient-to-r from-white via-white/40 to-transparent dark:from-black dark:via-black/40 dark:to-transparent z-[1]" />
+        <div className="absolute inset-0 bg-gradient-to-t from-white/80 via-transparent to-transparent dark:from-black/80 dark:via-transparent dark:to-transparent z-[1]" />
       </div>
 
       <div className="relative z-10 w-full max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-8 items-center">

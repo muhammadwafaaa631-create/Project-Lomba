@@ -1,6 +1,6 @@
 export default function CallToAction() {
   return (
-    <section className="py-24 px-6 relative overflow-hidden bg-[#FDFBF7] dark:bg-[#0B1120] text-center border-t border-slate-200 dark:border-white/5 transition-colors duration-700">
+    <section className="py-24 px-6 relative overflow-hidden bg-transparent text-center border-t border-white/10 transition-colors duration-700">
       {/* Abstract Background Glow */}
       <div className="absolute inset-0 z-0 opacity-30 mt-[10vh]">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[300px] bg-[#00A8FF]/20 rounded-[100%] blur-[100px] mix-blend-screen"></div>

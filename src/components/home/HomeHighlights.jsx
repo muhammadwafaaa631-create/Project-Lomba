@@ -35,7 +35,7 @@ export default function HomeHighlights() {
   ];
 
   return (
-    <section className="py-24 bg-white dark:bg-black transition-colors duration-700">
+    <section className="py-24 bg-transparent transition-colors duration-700">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-4">Eksplorasi Bandung</h2>
@@ -56,7 +56,7 @@ export default function HomeHighlights() {
                 transition={{ duration: 0.5, delay: idx * 0.1 }}
                 className="group"
               >
-                <Link to={item.path} className="block h-full p-8 rounded-[2rem] bg-slate-50 dark:bg-white/5 border border-slate-100 dark:border-white/5 hover:border-[#00A8FF]/30 transition-all hover:shadow-xl hover:-translate-y-2 relative overflow-hidden">
+                <Link to={item.path} className="block h-full p-8 rounded-[2rem] bg-white/10 dark:bg-white/5 backdrop-blur-md border border-white/20 dark:border-white/10 hover:border-[#00A8FF]/30 transition-all hover:shadow-xl hover:-translate-y-2 relative overflow-hidden">
                   <div className={`absolute top-0 right-0 w-32 h-32 ${item.color} opacity-[0.03] blur-3xl`} />
                   
                   <div className={`w-14 h-14 rounded-2xl ${item.color}/10 flex items-center justify-center text-slate-900 dark:text-white mb-6 group-hover:scale-110 transition-transform duration-500`}>

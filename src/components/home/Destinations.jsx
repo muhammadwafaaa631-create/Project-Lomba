@@ -5,7 +5,7 @@ export default function Destinations() {
   ];
 
   return (
-    <section className="py-16 bg-[#FDFBF7] dark:bg-[#0B1120] px-6 transition-colors duration-700">
+    <section className="py-16 bg-transparent px-6 transition-colors duration-700">
       <div className="max-w-7xl mx-auto">
         <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-8 border-b border-slate-200 dark:border-white/10 pb-4">Sorotan Kota</h2>
         

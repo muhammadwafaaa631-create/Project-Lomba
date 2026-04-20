@@ -109,7 +109,7 @@ export default function ExploreBandung() {
   const [activeTab, setActiveTab] = useState(CATEGORIES[0].id);
 
   return (
-    <section className="py-24 bg-[#FDFBF7] dark:bg-[#0B1120] transition-colors duration-700 relative overflow-hidden">
+    <section className="py-24 bg-transparent transition-colors duration-700 relative overflow-hidden">
       {/* Background Decor */}
       <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#00A8FF]/5 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/3 pointer-events-none" />
       
@@ -135,7 +135,7 @@ export default function ExploreBandung() {
                 className={`flex items-center gap-2 px-6 py-3 rounded-full text-sm font-semibold transition-all duration-300 ${
                   isActive 
                     ? "bg-[#00A8FF] text-white shadow-[0_0_20px_rgba(0,168,255,0.4)]" 
-                    : "bg-white dark:bg-white/5 border border-slate-200 dark:border-white/10 text-slate-600 dark:text-gray-300 hover:bg-slate-50 dark:hover:bg-white/10"
+                    : "bg-white/10 dark:bg-white/5 backdrop-blur-md border border-white/20 dark:border-white/10 text-slate-800 dark:text-gray-300 hover:bg-white/20 dark:hover:bg-white/10 shadow-sm"
                 }`}
               >
                 <Icon size={18} />
@@ -165,7 +165,7 @@ export default function ExploreBandung() {
                 >
                   <Link 
                     to={item.link} 
-                    className="group block bg-white dark:bg-[#111827] rounded-3xl overflow-hidden border border-slate-200 dark:border-white/5 shadow-lg hover:shadow-2xl dark:hover:shadow-[#00A8FF]/10 transition-all duration-500 hover:-translate-y-2 h-full flex flex-col"
+                    className="group block bg-white/10 dark:bg-white/5 backdrop-blur-md rounded-3xl overflow-hidden border border-white/20 dark:border-white/10 shadow-lg hover:shadow-2xl dark:hover:shadow-[#00A8FF]/10 transition-all duration-500 hover:-translate-y-2 h-full flex flex-col"
                   >
                     <div className="relative h-56 overflow-hidden">
                       <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-500 z-10" />

@@ -100,7 +100,7 @@ export default function CulinaryAndCulture() {
   };
 
   return (
-    <section className="py-24 bg-[#FDFBF7] dark:bg-[#0B1120] relative overflow-hidden transition-colors duration-700">
+    <section className="py-24 bg-transparent relative overflow-hidden transition-colors duration-700">
       {/* Background Ornaments */}
       <div className="absolute top-0 right-0 w-64 h-64 bg-orange-100/30 dark:bg-orange-900/10 rounded-full -translate-y-1/2 translate-x-1/2 blur-3xl -z-10" />
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-blue-100/20 dark:bg-blue-900/10 rounded-full translate-y-1/2 -translate-x-1/2 blur-3xl -z-10" />
@@ -112,7 +112,7 @@ export default function CulinaryAndCulture() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="inline-flex items-center gap-2 px-3 py-1 bg-orange-100 dark:bg-orange-500/10 text-orange-600 dark:text-orange-400 rounded-full text-sm font-semibold mb-4 border border-orange-200 dark:border-orange-500/20"
+              className="inline-flex items-center gap-2 px-3 py-1 bg-orange-100/20 dark:bg-orange-500/10 text-orange-600 dark:text-orange-400 rounded-full text-sm font-semibold mb-4 border border-white/20 dark:border-white/10 backdrop-blur-md"
             >
               <Utensils size={14} />
               <span>Taste of Bandung</span>
@@ -143,8 +143,8 @@ export default function CulinaryAndCulture() {
               disabled={!canScrollLeft}
               className={`p-4 rounded-full border-2 transition-all ${
                 canScrollLeft 
-                ? "border-slate-200 dark:border-white/10 text-slate-800 dark:text-gray-300 hover:bg-slate-900 dark:hover:bg-white hover:text-white dark:hover:text-black hover:border-slate-900 dark:hover:border-white shadow-sm" 
-                : "border-slate-100 dark:border-white/5 text-slate-300 dark:text-gray-700 cursor-not-allowed"
+                ? "border-white/20 dark:border-white/10 text-slate-800 dark:text-gray-300 backdrop-blur-md hover:bg-slate-900 dark:hover:bg-white hover:text-white dark:hover:text-black hover:border-slate-900 dark:hover:border-white shadow-sm" 
+                : "border-white/10 dark:border-white/5 text-slate-300 dark:text-gray-700 cursor-not-allowed"
               }`}
             >
               <ChevronLeft size={24} />
@@ -154,8 +154,8 @@ export default function CulinaryAndCulture() {
               disabled={!canScrollRight}
               className={`p-4 rounded-full border-2 transition-all ${
                 canScrollRight 
-                ? "border-slate-200 dark:border-white/10 text-slate-800 dark:text-gray-300 hover:bg-slate-900 dark:hover:bg-white hover:text-white dark:hover:text-black hover:border-slate-900 dark:hover:border-white shadow-sm" 
-                : "border-slate-100 dark:border-white/5 text-slate-300 dark:text-gray-700 cursor-not-allowed"
+                ? "border-white/20 dark:border-white/10 text-slate-800 dark:text-gray-300 backdrop-blur-md hover:bg-slate-900 dark:hover:bg-white hover:text-white dark:hover:text-black hover:border-slate-900 dark:hover:border-white shadow-sm" 
+                : "border-white/10 dark:border-white/5 text-slate-300 dark:text-gray-700 cursor-not-allowed"
               }`}
             >
               <ChevronRight size={24} />
@@ -178,7 +178,7 @@ export default function CulinaryAndCulture() {
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
               whileHover={{ y: -10 }}
-              className="min-w-[320px] md:min-w-[400px] snap-start bg-white dark:bg-[#111827] rounded-[2.5rem] overflow-hidden shadow-[0_15px_60px_-15px_rgba(0,0,0,0.1)] dark:shadow-none hover:shadow-[0_45px_100px_-20px_rgba(0,0,0,0.15)] transition-all duration-500 border border-slate-50 dark:border-white/5 group flex-shrink-0 cursor-pointer"
+              className="min-w-[320px] md:min-w-[400px] snap-start bg-white/10 dark:bg-white/5 backdrop-blur-md rounded-[2.5rem] overflow-hidden shadow-[0_15px_60px_-15px_rgba(0,0,0,0.1)] dark:shadow-none hover:shadow-[0_45px_100px_-20px_rgba(0,0,0,0.15)] transition-all duration-500 border border-white/20 dark:border-white/10 group flex-shrink-0 cursor-pointer"
             >
               <div className="h-64 overflow-hidden relative">
                 <img 

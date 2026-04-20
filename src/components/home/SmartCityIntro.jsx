@@ -3,7 +3,7 @@ import { Cpu, Globe, Zap } from "lucide-react";
 
 export default function SmartCityIntro() {
   return (
-    <section id="smart-city" className="py-24 bg-[#FDFBF7] dark:bg-[#0B1120] transition-colors duration-700 overflow-hidden">
+    <section id="smart-city" className="py-24 bg-transparent transition-colors duration-700 overflow-hidden">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <motion.div
@@ -27,7 +27,7 @@ export default function SmartCityIntro() {
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="flex gap-4 p-4 rounded-2xl bg-white dark:bg-white/5 border border-slate-200 dark:border-white/5 shadow-sm">
+              <div className="flex gap-4 p-4 rounded-2xl bg-white/10 dark:bg-white/5 backdrop-blur-md border border-white/20 dark:border-white/10 shadow-sm">
                 <div className="w-12 h-12 rounded-xl bg-blue-500/10 flex items-center justify-center text-blue-500 shrink-0">
                   <Globe size={24} />
                 </div>
@@ -36,7 +36,7 @@ export default function SmartCityIntro() {
                   <p className="text-xs text-slate-500 dark:text-gray-400">Terhubung secara digital dengan standar internasional.</p>
                 </div>
               </div>
-              <div className="flex gap-4 p-4 rounded-2xl bg-white dark:bg-white/5 border border-slate-200 dark:border-white/5 shadow-sm">
+              <div className="flex gap-4 p-4 rounded-2xl bg-white/10 dark:bg-white/5 backdrop-blur-md border border-white/20 dark:border-white/10 shadow-sm">
                 <div className="w-12 h-12 rounded-xl bg-amber-500/10 flex items-center justify-center text-amber-500 shrink-0">
                   <Zap size={24} />
                 </div>
@@ -65,7 +65,7 @@ export default function SmartCityIntro() {
             <motion.div 
               animate={{ y: [0, -15, 0] }}
               transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-              className="absolute -bottom-8 -left-8 z-20 bg-white dark:bg-[#111827] p-6 rounded-2xl border border-slate-200 dark:border-white/10 shadow-2xl"
+              className="absolute -bottom-8 -left-8 z-20 bg-white/10 dark:bg-[#111827]/30 backdrop-blur-xl p-6 rounded-2xl border border-white/20 dark:border-white/10 shadow-2xl"
             >
               <p className="text-[10px] font-bold text-[#00A8FF] uppercase tracking-widest mb-2">System Status</p>
               <div className="flex items-center gap-3">

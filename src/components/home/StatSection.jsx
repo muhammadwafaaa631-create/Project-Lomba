@@ -44,7 +44,7 @@ const STATS = [
 
 export default function StatSection() {
   return (
-    <section className="py-12 md:py-20 bg-white dark:bg-black transition-colors duration-700 relative overflow-hidden">
+    <section className="py-12 md:py-20 bg-transparent transition-colors duration-700 relative overflow-hidden">
       {/* Subtle Background Elements */}
       <div className="absolute top-1/2 left-1/4 -translate-y-1/2 w-64 h-64 bg-blue-500/5 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute top-1/2 right-1/4 -translate-y-1/2 w-64 h-64 bg-indigo-500/5 rounded-full blur-3xl pointer-events-none" />
@@ -86,7 +86,7 @@ function StatCard({ stat, index }) {
       animate={isInView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.6, delay: index * 0.15 }}
       whileHover={{ y: -5 }}
-      className="group relative flex flex-col items-center text-center p-6 rounded-3xl transition-all duration-500"
+      className="group relative flex flex-col items-center text-center p-8 rounded-[2.5rem] bg-white/10 dark:bg-white/5 backdrop-blur-md border border-white/20 dark:border-white/10 shadow-xl transition-all duration-500"
     >
       {/* Icon Wrapper */}
       <div className="mb-4 relative">
