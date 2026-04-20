@@ -1,4 +1,5 @@
-import { Routes, Route } from "react-router-dom"
+import { Routes, Route } from "react-router-dom";
+import { useState, useEffect } from "react";
 
 import Home from "./pages/Home"
 import About from "./pages/About"
@@ -11,11 +12,17 @@ import Kemerdekaan from "./pages/history/Kemerdekaan";
 import MasaModern from "./pages/history/MasaModern";
 import Navbar from "./components/Navbar"
 import Footer from "./components/Footer"
+import IntroScreen from "./components/IntroScreen"
 
 function App() {
+  const [introFinished, setIntroFinished] = useState(false);
+
   return (
-    <div className="flex flex-col min-h-screen">
-      <Navbar />
+    <>
+      <IntroScreen onComplete={() => setIntroFinished(true)} />
+      
+      <div className={`flex flex-col min-h-screen ${!introFinished ? 'h-screen overflow-hidden' : ''}`}>
+        <Navbar />
 
       <main className="grow">
         <Routes>
@@ -39,7 +46,8 @@ function App() {
       </main>
 
       <Footer />
-    </div>
+      </div>
+    </>
   )
 }
 

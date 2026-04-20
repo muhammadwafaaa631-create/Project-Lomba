@@ -92,7 +92,7 @@ export default function Home() {
                     </div>
                 </section>
                 
-                <div className="relative z-10 w-full flex flex-col pt-8 drop-shadow-sm">
+                <div className="relative z-10 w-full flex flex-col pt-16 mt-12 drop-shadow-sm bg-[#FDFBF7] dark:bg-[#030303] rounded-t-[3rem] 2xl:rounded-t-[4rem] shadow-2xl transition-colors duration-700 border-t border-slate-200 dark:border-white/5 pb-24">
                     <StatSection />
                     <ExploreBandung />
                     

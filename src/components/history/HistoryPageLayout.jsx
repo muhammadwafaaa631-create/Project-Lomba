@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence, useScroll, useTransform } from "framer-motion";
 import { ArrowLeft, ArrowRight, User, Info, Image as ImageIcon, TrendingUp, Sparkles, MapPin, Calendar, ExternalLink, ChevronLeft, ChevronRight } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const DashboardCard = ({ title, icon: Icon, children, theme, delay = 0 }) => (
     <motion.div
@@ -31,6 +31,7 @@ const HistoryPageLayout = ({
     theme,
     content
 }) => {
+    const navigate = useNavigate();
     const [activeIndex, setActiveIndex] = useState(0);
     const heroRef = useRef(null);
     const timelineRef = useRef(null);
@@ -96,8 +97,14 @@ const HistoryPageLayout = ({
                     <div className="flex items-center justify-between gap-4">
                         {/* Prev Button */}
                         <button 
-                            onClick={() => setActiveIndex(prev => prev > 0 ? prev - 1 : content.timeline.length - 1)}
-                            className={`p-3 rounded-full flex-shrink-0 transition-all ${theme.textColor} hover:bg-slate-200 dark:hover:bg-white/10`}
+                            onClick={() => {
+                                if (activeIndex > 0) {
+                                    setActiveIndex(prev => prev - 1);
+                                } else if (content.navigation.prevLink) {
+                                    navigate(content.navigation.prevLink);
+                                }
+                            }}
+                            className={`p-3 rounded-full flex-shrink-0 transition-all ${theme.textColor} hover:bg-slate-200 dark:hover:bg-white/10 ${(activeIndex === 0 && !content.navigation.prevLink) ? 'opacity-30 cursor-not-allowed' : ''}`}
                         >
                             <ChevronLeft size={24} />
                         </button>
@@ -126,8 +133,14 @@ const HistoryPageLayout = ({
 
                         {/* Next Button */}
                         <button 
-                            onClick={() => setActiveIndex(prev => prev < content.timeline.length - 1 ? prev + 1 : 0)}
-                            className={`p-3 rounded-full flex-shrink-0 transition-all ${theme.textColor} hover:bg-slate-200 dark:hover:bg-white/10 animate-pulse`}
+                            onClick={() => {
+                                if (activeIndex < content.timeline.length - 1) {
+                                    setActiveIndex(prev => prev + 1);
+                                } else if (content.navigation.nextLink) {
+                                    navigate(content.navigation.nextLink);
+                                }
+                            }}
+                            className={`p-3 rounded-full flex-shrink-0 transition-all ${theme.textColor} hover:bg-slate-200 dark:hover:bg-white/10 ${(activeIndex === content.timeline.length - 1 && !content.navigation.nextLink) ? 'opacity-30 cursor-not-allowed' : 'animate-pulse'}`}
                         >
                             <ChevronRight size={24} />
                         </button>

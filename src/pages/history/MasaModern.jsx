@@ -32,7 +32,7 @@ export default function MasaModern() {
                     { name: "Pemerintah Jabar", role: "Administrator", desc: "Pengelola pembangunan infrastruktur regional Bandung Raya.", image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=200" }
                 ],
                 facts: [
-                    { title: "Jembatan Pasupati", text: "Jembatan layang ikonik yang menghubungkan Bandung Timur dan Barat, menjadi simbol modernitas kota." }
+                    { title: "Fun Fact: Jembatan Raksasa", text: "Jembatan Pasupati adalah salah satu jembatan pilar tunggal (cable-stayed) pertama yang dibangun di Indonesia, membentang sepanjang 2,8 km melintasi lebak Cikapundung." }
                 ],
                 gallery: []
             },
@@ -52,7 +52,7 @@ export default function MasaModern() {
                     { name: "Ridwan Kamil", role: "Arsitek/Wali Kota", desc: "Pencetus konsep Smart City dan desain taman tematik.", image: "https://images.unsplash.com/photo-1552058544-f2b08422138a?auto=format&fit=crop&q=80&w=200" }
                 ],
                 facts: [
-                    { title: "Command Center", text: "Pusat kendali tercanggih di Indonesia saat diluncurkan, terinspirasi dari film fiksi ilmiah." }
+                    { title: "Fun Fact: Command Center ala Star Trek", text: "Bandung Command Center didesain secara unik dan futuristik menyerupai pesawat antariksa USS Enterprise di film Star Trek." }
                 ],
                 gallery: []
             },
@@ -72,7 +72,7 @@ export default function MasaModern() {
                     { name: "Pelaku Kreatif", role: "Inovator", desc: "Ribuan desainer, musisi, dan teknokrat muda Bandung.", image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=200" }
                 ],
                 facts: [
-                    { title: "UNESCO", text: "Bandung terpilih karena kekuatan ekosistem desainnya, mulai dari fashion hingga teknologi digital." }
+                    { title: "Fun Fact: Kota Desain Pertama", text: "Bandung adalah kota pertama di Asia Tenggara yang secara resmi dianugerahi gelar 'City of Design' dalam Jaringan Kota Kreatif (UCCN) oleh UNESCO." }
                 ],
                 gallery: []
             }

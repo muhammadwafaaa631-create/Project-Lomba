@@ -32,7 +32,7 @@ export default function Kemerdekaan() {
                     { name: "A.H. Nasution", role: "Komandan Siliwangi", desc: "Perencana strategi pertahanan di wilayah Jawa Barat.", image: "https://images.unsplash.com/photo-1506803682981-6e718a9dd3ee?auto=format&fit=crop&q=80&w=200" }
                 ],
                 facts: [
-                    { title: "Gedung Sate", text: "Pertempuran sengit terjadi di Gedung Sate untuk memperebutkan kantor pusat pemerintahan." }
+                    { title: "Fun Fact: Pertempuran Gedung Sate", text: "Pada 3 Desember 1945, terjadi pertempuran heroik di mana 7 pemuda gugur mempertahankan Gedung Sate dari tentara Gurkha/Sekutu. Tugu peringatannya kini bisa dilihat di halaman depan gedung." }
                 ],
                 gallery: []
             },
@@ -52,7 +52,7 @@ export default function Kemerdekaan() {
                     { name: "Mohammad Toha", role: "Relawan Pejuang", desc: "Pahlawan muda yang meledakkan gudang amunisi musuh.", image: "https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?auto=format&fit=crop&q=80&w=200" }
                 ],
                 facts: [
-                    { title: "Halo-Halo Bandung", text: "Lagu ini diciptakan Ismail Marzuki untuk mengenang rindu akan kota yang sedang terbakar." }
+                    { title: "Fun Fact: Lagu Halo-Halo Bandung", text: "Meski terkenal identik dengan peristiwa Bandung Lautan Api, sejatinya siapa pencipta asli lagu ini masih menjadi perdebatan, meski secara historis sering dikaitkan dengan Ismail Marzuki." }
                 ],
                 gallery: []
             },
@@ -72,7 +72,7 @@ export default function Kemerdekaan() {
                     { name: "Soekarno", role: "Proklamator", desc: "Tokoh sentral yang menghidupkan semangat KAA di Bandung.", image: "https://images.unsplash.com/photo-1540569014015-19a7be504e3a?auto=format&fit=crop&q=80&w=200" }
                 ],
                 facts: [
-                    { title: "Jalan Asia-Afrika", text: "Perubahan nama jalan raya pos untuk menghormati peserta konferensi." }
+                    { title: "Fun Fact: Grote Postweg Berganti Nama", text: "Untuk menyambut KAA perdana, sebagian Grote Postweg (Jalan Raya Pos) diubah namanya menjadi Jalan Asia Afrika, yang kini menjadi salah satu ruas ikonik Kota Bandung." }
                 ],
                 gallery: []
             }

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate, Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { Mountain, Castle, Building, Sword, Globe, Cpu, ChevronLeft, ChevronRight } from "lucide-react";
 
@@ -13,7 +14,9 @@ export default function Timeline() {
       icon: Mountain,
       color: "text-emerald-500",
       bgBorder: "border-emerald-500",
-      image: "https://images.unsplash.com/photo-1544473244-f6895e69ce8d?auto=format&fit=crop&q=80&w=800"
+      image: "https://images.unsplash.com/photo-1544473244-f6895e69ce8d?auto=format&fit=crop&q=80&w=800",
+      link: "/history/masa-awal",
+      tags: ["Cekungan Vulkanik", "Gua Pawon", "Asal-usul"]
     },
     { 
       year: "1810", 
@@ -22,7 +25,9 @@ export default function Timeline() {
       icon: Castle,
       color: "text-amber-500",
       bgBorder: "border-amber-500",
-      image: "https://images.unsplash.com/photo-1584285404554-1590fc981f96?auto=format&fit=crop&q=80&w=800"
+      image: "https://images.unsplash.com/photo-1584285404554-1590fc981f96?auto=format&fit=crop&q=80&w=800",
+      link: "/history/masa-awal",
+      tags: ["Jalan Raya Pos", "Daendels", "Pendirian Kota"]
     },
     { 
       year: "1920-an", 
@@ -31,7 +36,9 @@ export default function Timeline() {
       icon: Building,
       color: "text-pink-500",
       bgBorder: "border-pink-500",
-      image: "https://images.unsplash.com/photo-1627705191833-289b52a12513?auto=format&fit=crop&q=80&w=800"
+      image: "https://images.unsplash.com/photo-1627705191833-289b52a12513?auto=format&fit=crop&q=80&w=800",
+      link: "/history/kolonial",
+      tags: ["Art Deco", "Braga", "Pariwisata Eropa"]
     },
     { 
       year: "1946", 
@@ -40,7 +47,9 @@ export default function Timeline() {
       icon: Sword,
       color: "text-red-500",
       bgBorder: "border-red-500",
-      image: "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&q=80&w=800"
+      image: "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&q=80&w=800",
+      link: "/history/peristiwa-penting",
+      tags: ["Bumi Hangus", "Patriotisme", "Agresi Militer"]
     },
     { 
       year: "1955", 
@@ -49,7 +58,9 @@ export default function Timeline() {
       icon: Globe,
       color: "text-blue-500",
       bgBorder: "border-blue-500",
-      image: "https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&q=80&w=800"
+      image: "https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&q=80&w=800",
+      link: "/history/peristiwa-penting",
+      tags: ["Solidaritas Global", "Gedung Merdeka", "Dasasila"]
     },
     { 
       year: "Masa Kini", 
@@ -58,12 +69,20 @@ export default function Timeline() {
       icon: Cpu,
       color: "text-[#00A8FF]",
       bgBorder: "border-[#00A8FF]",
-      image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=800"
+      image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=800",
+      link: "/history/modern",
+      tags: ["Ekonomi Kreatif", "Startup", "Digitalisasi"]
     }
   ];
 
+  const navigate = useNavigate();
   const handleNext = () => {
-    setActiveIndex((prev) => (prev < events.length - 1 ? prev + 1 : prev));
+    if (activeIndex < events.length - 1) {
+      setActiveIndex((prev) => prev + 1);
+    } else {
+      // When on the last event, navigate to the next page (e.g., modern era page)
+      navigate('/history/modern');
+    }
   };
 
   const handlePrev = () => {
@@ -152,6 +171,24 @@ export default function Timeline() {
                    <p className="text-slate-600 dark:text-gray-400 text-lg leading-relaxed mb-8">
                      {activeEvent.desc}
                    </p>
+
+                   {/* Tags UI */}
+                   {activeEvent.tags && (
+                     <div className="flex flex-wrap gap-2 mb-8">
+                       {activeEvent.tags.map((tag, idx) => (
+                         <span key={idx} className={`px-4 py-1.5 rounded-full text-sm font-bold bg-slate-100 dark:bg-white/5 border border-slate-200 dark:border-white/10 ${activeEvent.color}`}>
+                           # {tag}
+                         </span>
+                       ))}
+                     </div>
+                   )}
+                   
+                   <Link 
+                     to={activeEvent.link} 
+                     className={`inline-flex items-center gap-2 px-8 py-3 rounded-full font-bold shadow-xl text-white transition-all hover:scale-105 active:scale-95 ${activeEvent.bgBorder.replace('border-', 'bg-')}`}
+                   >
+                     Telusuri Masa Ini <ChevronRight size={20} />
+                   </Link>
                 </div>
                 
                 {/* Image Right */}

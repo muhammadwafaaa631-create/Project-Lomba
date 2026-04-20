@@ -3,42 +3,49 @@ import { Shield, Train, ShoppingBag, Heart } from "lucide-react";
 export default function DigitalDashboard() {
   const features = [
     { 
-      title: "Smart Governance", 
-      desc: "Layanan publik digital terintegrasi untuk birokrasi yang cepat, transparan, dan efisien.", 
+      title: "Bandung Sadayana", 
+      desc: "Super App resmi Kota Bandung yang menyatukan seluruh layanan publik dalam satu genggaman.", 
       icon: Shield, 
-      progress: "92%" 
+      action: "Buka Aplikasi",
+      color: "text-blue-500",
+      bgScale: "w-[85%]" 
     },
     { 
-      title: "Smart Mobility", 
-      desc: "Sistem transportasi & infrastruktur cerdas untuk mobilitas warga yang lancar dan terkoneksi.", 
-      icon: Train, 
-      progress: "85%" 
-    },
-    { 
-      title: "Smart Economy", 
-      desc: "Pemberdayaan UMKM & ekonomi kreatif melalui platform digital guna meningkatkan ekonomi daerah.", 
-      icon: ShoppingBag, 
-      progress: "78%" 
-    },
-    { 
-      title: "Smart Living", 
-      desc: "Peningkatan kualitas hidup & lingkungan melalui teknologi ramah lingkungan dan sanitasi cerdas.", 
+      title: "Sapa Warga", 
+      desc: "Platform interaksi dan pengaduan warga secara langsung kepada pemerintah secara cepat dan transparan.", 
       icon: Heart, 
-      progress: "60%" 
+      action: "Lapor Sekarang",
+      color: "text-emerald-500",
+      bgScale: "w-[95%]"
+    },
+    { 
+      title: "ATCS Live CCTV", 
+      desc: "Pantau kondisi arus lalu lintas Kota Bandung secara real-time di berbagai persimpangan jalan.", 
+      icon: Train, 
+      action: "Lihat Pantauan",
+      color: "text-amber-500",
+      bgScale: "w-[100%]"
+    },
+    { 
+      title: "Layanan Darurat 112", 
+      desc: "Layanan bebas pulsa 24 jam untuk penanganan kegawatdaruratan medis, medis, bencana dan keamanan.", 
+      icon: Shield, 
+      action: "Hubungi 112",
+      color: "text-red-500",
+      bgScale: "w-[100%]"
     }
   ];
-
 
   return (
     <section id="innovation" className="py-24 bg-transparent px-6 transition-colors duration-700">
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-center mb-12">
           <div>
-            <h2 className="text-3xl font-bold text-slate-900 dark:text-white mb-2">Inovasi Digital Bandung</h2>
-            <p className="text-slate-500 dark:text-gray-400 text-sm">Empat pilar utama transformasi digital menuju Nusantara Digital City.</p>
+            <h2 className="text-3xl font-bold text-slate-900 dark:text-white mb-2">Portal Layanan Digital</h2>
+            <p className="text-slate-500 dark:text-gray-400 text-sm">Akses berbagai platform resmi terintegrasi milik Pemerintah Kota Bandung.</p>
           </div>
-          <button className="hidden md:block text-[10px] uppercase tracking-wider font-bold text-[#00A8FF] bg-[#00A8FF]/10 px-4 py-2 rounded-full border border-[#00A8FF]/30 hover:bg-[#00A8FF]/20 transition mt-4 md:mt-0">
-            Lihat Dashboard Kota
+          <button className="hidden md:block text-sm uppercase tracking-wider font-bold text-white bg-blue-600 px-6 py-3 rounded-full hover:bg-blue-700 shadow-xl transition mt-4 md:mt-0">
+            Jelajahi Semua Layanan
           </button>
         </div>
 
@@ -47,23 +54,19 @@ export default function DigitalDashboard() {
           {features.map((feat, idx) => {
             const Icon = feat.icon;
             return (
-              <div key={idx} className="bg-white/70 dark:bg-[#0B1120]/70 backdrop-blur-xl rounded-3xl p-6 border border-white/50 dark:border-white/10 hover:border-[#0092E4]/30 transition-all flex flex-col justify-between shadow-lg dark:shadow-none">
+              <div key={idx} className="bg-white/80 dark:bg-[#111827]/80 backdrop-blur-xl rounded-3xl p-6 border border-slate-200 dark:border-white/10 hover:border-blue-500/50 transition-all flex flex-col justify-between shadow-xl">
                 <div>
-                  <div className="w-10 h-10 rounded-lg bg-slate-900/5 dark:bg-[#ffffff]/5 flex items-center justify-center mb-4 text-[#00A8FF] border border-slate-900/10 dark:border-white/10">
-                    <Icon size={20} />
+                  <div className={`w-12 h-12 rounded-xl bg-slate-100 dark:bg-white/5 flex items-center justify-center mb-5 ${feat.color} border border-slate-200 dark:border-white/10`}>
+                    <Icon size={24} />
                   </div>
-                  <h3 className="text-slate-900 dark:text-white font-semibold text-lg mb-2">{feat.title}</h3>
-                  <p className="text-slate-500 dark:text-gray-400 text-sm leading-relaxed mb-8">{feat.desc}</p>
+                  <h3 className="text-slate-900 dark:text-white font-bold text-lg mb-3">{feat.title}</h3>
+                  <p className="text-slate-600 dark:text-gray-400 text-sm leading-relaxed mb-8">{feat.desc}</p>
                 </div>
                 
                 <div className="mt-auto">
-                  <div className="flex justify-between items-end mb-1 text-xs">
-                    <span className="text-gray-500">Adoption Rate</span>
-                    <span className="text-gray-400 font-medium">{feat.progress}</span>
-                  </div>
-                  <div className="w-full bg-white/5 rounded-full h-1">
-                    <div className="bg-[#00A8FF] h-full rounded-full" style={{ width: feat.progress }} />
-                  </div>
+                  <button className="w-full py-3 rounded-xl bg-slate-100 dark:bg-white/5 text-slate-900 dark:text-white text-sm font-bold hover:bg-blue-50 hover:text-blue-600 dark:hover:bg-blue-600 dark:hover:text-white transition-all border border-slate-200 dark:border-white/5">
+                    {feat.action}
+                  </button>
                 </div>
               </div>
             )

@@ -32,7 +32,7 @@ export default function HindiaBelanda() {
                     { name: "Roth", role: "Pengusaha", desc: "Seseorang yang mempromosikan keindahan Bandung ke dunia luar.", image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=200" }
                 ],
                 facts: [
-                    { title: "Paris van Java", text: "Julukan ini pertama kali digunakan untuk menarik wisatawan Eropa ke pasar malam tahunan di Bandung." }
+                    { title: "Fun Fact: Paris van Java", text: "Julukan 'Paris van Java' awalnya disematkan bukan murni karena fesyen, melainkan untuk menarik wisatawan Eropa ke pasar malam jaarbeurs tahunan di Bandung agar terasa se-glamor Paris." }
                 ],
                 gallery: []
             },
@@ -45,14 +45,14 @@ export default function HindiaBelanda() {
                 image: "https://images.unsplash.com/photo-1590424600649-ceb5b31e9233?auto=format&fit=crop&q=80&w=800",
                 impactText: "Mewariskan gedung-gedung monumental berskala nasional di Bandung.",
                 impactPoints: [
-                    { title: "Sentra Intelektual", text: "Berdirinya ITB sebagai institusi teknik tertua di Indonesia." },
+                    { title: "Sentra Intelektual", text: "Berdirinya ITB (Technische Hoogeschool) sebagai institusi teknik tertua di Indonesia." },
                     { title: "Pusat Militer", text: "Relokasi pusat komando militer ke wilayah Cimahi dan Bandung." }
                 ],
                 figures: [
                     { name: "J. Gerber", role: "Arsitek", desc: "Perancang utama Gedung Sate yang ikonik.", image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=200" }
                 ],
                 facts: [
-                    { title: "Gulden & Sate", text: "Puncak Gedung Sate dengan 6 buah tusuk sate melambangkan biaya 6 juta gulden yang dikeluarkan." }
+                    { title: "Fun Fact: Ornamen Sate", text: "Enam buah 'tusuk sate' pada puncak Gedung Sate konon melambangkan biaya 6 juta gulden yang dihabiskan untuk pembangunannya." }
                 ],
                 gallery: []
             },
@@ -72,7 +72,7 @@ export default function HindiaBelanda() {
                     { name: "Wolff Schoemaker", role: "Arsitek Jenius", desc: "Guru dari Ir. Soekarno yang banyak merancang gedung Art Deco di Bandung.", image: "https://images.unsplash.com/photo-1552058544-f2b08422138a?auto=format&fit=crop&q=80&w=200" }
                 ],
                 facts: [
-                    { title: "Braga Fashion", text: "Braga adalah tempat mode Paris terbaru dijual hanya berselang seminggu setelah peluncuran di Prancis." }
+                    { title: "Fun Fact: Braga Fashion", text: "Di era ini, pakaian mode terbaru dari Paris konon langsung dipajang di etalase toko-toko Jalan Braga hanya berselang seminggu setelah diluncurkan." }
                 ],
                 gallery: []
             }

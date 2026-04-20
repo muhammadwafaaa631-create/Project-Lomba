@@ -32,7 +32,7 @@ export default function PendirianKota() {
                     { name: "Daendels", role: "Gubernur Jenderal", desc: "Arsitek 'Grote Postweg' yang keras dan disiplin.", image: "https://images.unsplash.com/photo-1542909168-82c3e7fdca5c?auto=format&fit=crop&q=80&w=200" }
                 ],
                 facts: [
-                    { title: "Kerja Paksa", text: "Pembangunan jalan ini memakan ribuan korban jiwa akibat medan yang sangat berat di perbukitan Priangan." }
+                    { title: "Fun Fact: Grote Postweg", text: "Proyek jalan ini sangat panjang. Di Bandung masa kini, sisa Grote Postweg menjadi nama jalan protokol utama seperti Jl. Jenderal Sudirman dan Jl. Asia Afrika." }
                 ],
                 gallery: []
             },
@@ -52,7 +52,7 @@ export default function PendirianKota() {
                     { name: "Wiranatakusumah II", role: "Bupati Bandung", desc: "Sang pendiri yang visioner memilih lokasi strategis di dataran tinggi.", image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&q=80&w=200" }
                 ],
                 facts: [
-                    { title: "Tongkat Keramat", text: "Titik tempat Daendels menancapkan tongkat kini menjadi monumen Nol Kilometer Bandung." }
+                    { title: "Fun Fact: Tongkat Daendels", text: "Lokasi persis Daendels menancapkan tongkat saat berucap 'Zorg, dat als ik terug kom hier een stad is gebouwd' kini ditandai dengan monumen Stoomwals (mesin giling) di dekat Gedung Merdeka." }
                 ],
                 gallery: []
             },
@@ -72,7 +72,7 @@ export default function PendirianKota() {
                     { name: "Wiranatakusumah II", role: "Dalem Kaum", desc: "Dikenal sangat dicintai rakyatnya hingga dimakamkan di Masjid Agung.", image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&q=80&w=200" }
                 ],
                 facts: [
-                    { title: "Arti Nama", text: "Nama Bandung berasal dari kata 'Bendung' karena wilayahnya yang dikelilingi pegunungan seperti bendungan." }
+                    { title: "Fun Fact: Hari Jadi Kota", text: "Tanggal 25 September 1810 merujuk pada dikeluarkannya 'besluit' (surat keputusan) Daendels mengenai status hukum Kota Bandung, menjadikannya hari ulang tahun resmi." }
                 ],
                 gallery: []
             }
