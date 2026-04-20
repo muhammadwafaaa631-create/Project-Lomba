@@ -75,7 +75,10 @@ export default function WisataHero() {
           </p>
 
           <div className="flex flex-wrap gap-4">
-            <button className="group flex items-center gap-2 bg-[#1A1A1A] dark:bg-white text-white dark:text-[#0B1120] px-8 py-4 rounded-2xl font-bold shadow-xl transition-all hover:scale-105 active:scale-95">
+            <button 
+              onClick={() => document.getElementById('wisata-map')?.scrollIntoView({ behavior: 'smooth' })}
+              className="group flex items-center gap-2 bg-[#1A1A1A] dark:bg-white text-white dark:text-[#0B1120] px-8 py-4 rounded-2xl font-bold shadow-xl transition-all hover:scale-105 active:scale-95"
+            >
               Lihat Destinasi
               <ArrowRight size={20} className="transition-transform group-hover:translate-x-1" />
             </button>
