@@ -7,15 +7,17 @@ import { Moon, Sun } from "lucide-react";
 export default function Navbar() {
   const { theme, toggleTheme } = useTheme();
   const [isOpen, setIsOpen] = useState(false);
-  const [isHistoryOpen, setIsHistoryOpen] = useState(false);
+  const [openDropdown, setOpenDropdown] = useState(null); // 'History' or 'Budaya'
   const location = useLocation();
   const historyRef = useRef(null);
+  const budayaRef = useRef(null);
 
   // Close dropdown when clicking outside
   useEffect(() => {
     function handleClickOutside(event) {
-      if (historyRef.current && !historyRef.current.contains(event.target)) {
-        setIsHistoryOpen(false);
+      if (historyRef.current && !historyRef.current.contains(event.target) &&
+          budayaRef.current && !budayaRef.current.contains(event.target)) {
+        setOpenDropdown(null);
       }
     }
     document.addEventListener("mousedown", handleClickOutside);
@@ -24,7 +26,7 @@ export default function Navbar() {
 
   // Close dropdown on route change
   useEffect(() => {
-    setIsHistoryOpen(false);
+    setOpenDropdown(null);
     setIsOpen(false);
   }, [location]);
 
@@ -39,12 +41,24 @@ export default function Navbar() {
         { name: "Peristiwa Penting", path: "/history/peristiwa-penting" },
         { name: "Bandung Modern", path: "/history/modern" },
       ]
-
     },
     { name: "Wisata", path: "/wisata" },
-    { name: "Budaya", path: "/budaya" },
+    { 
+      name: "Budaya", 
+      path: "/budaya",
+      subLinks: [
+        { name: "Tradisi & Kearifan Lokal", path: "/budaya#tradisi" },
+        { name: "Seni Pertunjukan", path: "/budaya#seni-pertunjukan" },
+        { name: "Kesenian Tradisional", path: "/budaya#kesenian" },
+        { name: "Kuliner", path: "/budaya#kuliner" },
+      ]
+    },
     { name: "About", path: "/about" },
   ];
+
+  const handleDropdownToggle = (name) => {
+    setOpenDropdown(openDropdown === name ? null : name);
+  };
 
   return (
     <header className="fixed top-0 left-0 w-full z-50 bg-[#FDFBF7]/80 dark:bg-[#111827]/80 backdrop-blur-md border-b border-gray-200 dark:border-white/5 transition-colors duration-700">
@@ -67,11 +81,11 @@ export default function Navbar() {
             <div 
               key={link.name} 
               className="relative"
-              ref={link.name === "History" ? historyRef : null}
+              ref={link.name === "History" ? historyRef : link.name === "Budaya" ? budayaRef : null}
             >
               {link.subLinks ? (
                 <button
-                  onClick={() => setIsHistoryOpen(!isHistoryOpen)}
+                  onClick={() => handleDropdownToggle(link.name)}
                   className={`pb-1 transition-colors flex items-center gap-1 outline-none ${
                     location.pathname.startsWith(link.path)
                       ? "text-[#00A8FF] border-b-2 border-[#00A8FF]"
@@ -79,7 +93,7 @@ export default function Navbar() {
                   }`}
                 >
                   {link.name}
-                  <svg className={`w-4 h-4 transition-transform ${isHistoryOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className={`w-4 h-4 transition-transform ${openDropdown === link.name ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                   </svg>
                 </button>
@@ -99,7 +113,7 @@ export default function Navbar() {
               {/* Dropdown Menu */}
               {link.subLinks && (
                 <div className={`absolute left-0 mt-2 w-56 bg-[#111827] border border-white/10 rounded-xl overflow-hidden transition-all duration-300 shadow-2xl ${
-                  isHistoryOpen ? 'opacity-100 translate-y-0 pointer-events-auto' : 'opacity-0 translate-y-2 pointer-events-none'
+                  openDropdown === link.name ? 'opacity-100 translate-y-0 pointer-events-auto' : 'opacity-0 translate-y-2 pointer-events-none'
                 }`}>
                   <div className="py-2">
                     {link.subLinks.map((sub) => (
@@ -107,19 +121,19 @@ export default function Navbar() {
                         key={sub.name}
                         to={sub.path}
                         className={`block px-5 py-3 text-sm transition-colors hover:bg-[#00A8FF]/10 ${
-                          location.pathname === sub.path ? "text-[#00A8FF] bg-[#00A8FF]/5" : "text-gray-400 hover:text-white"
+                          (location.pathname + location.hash) === sub.path ? "text-[#00A8FF] bg-[#00A8FF]/5" : "text-gray-400 hover:text-white"
                         }`}
                       >
                         {sub.name}
                       </Link>
                     ))}
-                    {/* Optional: link to main history page if needed */}
+                    {/* Optional: link to main page if needed */}
                     <div className="border-t border-white/5 mt-1">
                       <Link
-                        to="/history"
+                        to={link.path}
                         className="block px-5 py-3 text-xs text-gray-500 hover:text-white transition-colors"
                       >
-                        Lihat Garis Waktu Utama
+                        Lihat Semua {link.name}
                       </Link>
                     </div>
                   </div>
@@ -207,7 +221,7 @@ export default function Navbar() {
                         to={sub.path}
                         onClick={() => setIsOpen(false)}
                         className={`text-base ${
-                          location.pathname === sub.path ? "text-[#00A8FF]" : "text-gray-400"
+                          (location.pathname + location.hash) === sub.path ? "text-[#00A8FF]" : "text-gray-400"
                         }`}
                       >
                         {sub.name}
@@ -240,4 +254,4 @@ export default function Navbar() {
       )}
     </header>
   );
-}
+}

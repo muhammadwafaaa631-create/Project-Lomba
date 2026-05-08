@@ -12,7 +12,7 @@ export default function CulinaryAndCulture() {
     { 
       id: 19,
       title: "Batagor", 
-      img: "https://images.unsplash.com/photo-1565557623262-b51c2513a641?q=80&w=800", 
+      img: "https://upload.wikimedia.org/wikipedia/commons/2/2c/Batagor.jpg", 
       desc: "Fried fish dumplings with rich savory peanut sauce.",
       tag: "Must Try",
       time: "15 min",
@@ -21,7 +21,7 @@ export default function CulinaryAndCulture() {
     { 
       id: 20,
       title: "Mie Kocok", 
-      img: "https://images.unsplash.com/photo-1574484284002-952d92456975?q=80&w=800", 
+      img: "https://upload.wikimedia.org/wikipedia/commons/7/7a/Mie_kocok.jpg", 
       desc: "Flat noodles served in rich beef tendon soup with bean sprouts.",
       tag: "Iconic",
       time: "25 min",
@@ -30,7 +30,7 @@ export default function CulinaryAndCulture() {
     { 
       id: 21,
       title: "Seblak", 
-      img: "https://images.unsplash.com/photo-1626082872481-22923e597c88?q=80&w=800", 
+      img: "https://upload.wikimedia.org/wikipedia/commons/3/3a/Seblak_bandung.jpg", 
       desc: "Spicy and savory wet crackers with diversos toppings.",
       tag: "Spicy Lover",
       time: "12 min",
@@ -39,7 +39,7 @@ export default function CulinaryAndCulture() {
     { 
       id: 22,
       title: "Surabi", 
-      img: "https://images.unsplash.com/photo-1528736235302-52922df5c122?q=80&w=800", 
+      img: "https://upload.wikimedia.org/wikipedia/commons/0/0f/Serabi.jpg", 
       desc: "Warm traditional pancakes cooked on clay charcoal stoves.",
       tag: "Best Snack",
       time: "10 min",
@@ -48,7 +48,7 @@ export default function CulinaryAndCulture() {
     { 
       id: 23,
       title: "Peuyeum", 
-      img: "https://images.unsplash.com/photo-1584285404554-1590fc981f96?q=80&w=800", 
+      img: "https://upload.wikimedia.org/wikipedia/commons/6/6b/Peuyeum.jpg", 
       desc: "Sweet and soft fermented cassava traditionally from Bandung.",
       tag: "Legendary",
       time: "24h+",
@@ -57,7 +57,7 @@ export default function CulinaryAndCulture() {
     { 
       id: 24,
       title: "Cuanki", 
-      img: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?q=80&w=800", 
+      img: "https://upload.wikimedia.org/wikipedia/commons/4/45/Cuanki.jpg", 
       desc: "Savory fish balls and dumplings served in warm clear broth.",
       tag: "Street Food",
       time: "10 min",

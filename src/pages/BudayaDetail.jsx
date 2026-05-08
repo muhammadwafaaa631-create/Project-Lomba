@@ -144,8 +144,34 @@ export default function BudayaDetail() {
         </div>
       </section>
 
+      {/* Gallery Section */}
+      {item.gallery && item.gallery.length > 0 && (
+        <section className="py-24 px-6 border-t border-slate-200 dark:border-white/5">
+          <div className="max-w-7xl mx-auto">
+            <h2 className="text-3xl font-bold mb-12 flex items-center gap-3">
+              <div className="w-1.5 h-8 bg-[#00A8FF] rounded-full" />
+              Galeri Visual
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {item.gallery.map((img, idx) => (
+                <motion.div
+                  key={idx}
+                  initial={{ opacity: 0, scale: 0.95 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: idx * 0.1 }}
+                  className="rounded-[3rem] overflow-hidden shadow-2xl border border-white/10 aspect-[4/3]"
+                >
+                  <img src={img} alt={`${item.title} gallery ${idx}`} className="w-full h-full object-cover hover:scale-110 transition-transform duration-700" />
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* Recommended Section (Simple) */}
-      <section className="py-24 px-6 border-t border-slate-200 dark:border-white/5">
+      <section className="py-24 px-6 border-t border-slate-200 dark:border-white/5 bg-slate-50/50 dark:bg-white/[0.02]">
          <div className="max-w-7xl mx-auto">
             <h2 className="text-3xl font-bold mb-12">Budaya Lainnya</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">

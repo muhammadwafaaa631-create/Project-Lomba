@@ -78,7 +78,10 @@ export default function MasaAwal() {
                 facts: [
                     { title: "Benteng Alami", text: "Hutan lebat dan pegunungan menjadikan Bandung benteng perlindungan alami kerajaan." }
                 ],
-                gallery: []
+                gallery: [
+                    { image: "/seren taun1.jpg", caption: "Tradisi Seren Taun (Warisan Pajajaran)" },
+                    { image: "/seren taun2.jpg", caption: "Ritual Syukur Panen" }
+                ]
             },
             {
                 year: "1641",

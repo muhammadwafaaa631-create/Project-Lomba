@@ -1,20 +1,35 @@
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Search, Filter, Palette, Music, Utensils, Theater, Landmark, ChevronRight } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { CULTURAL_DATA } from "../data/culturalData";
 
 const CATEGORIES = [
-  { name: "Semua", icon: Landmark },
-  { name: "Tradisi & Kearifan Lokal", icon: Theater },
-  { name: "Seni Pertunjukan", icon: Music },
-  { name: "Kesenian Tradisional", icon: Palette },
-  { name: "Kuliner", icon: Utensils }
+  { name: "Semua", icon: Landmark, id: "semua" },
+  { name: "Tradisi & Kearifan Lokal", icon: Theater, id: "tradisi" },
+  { name: "Seni Pertunjukan", icon: Music, id: "seni-pertunjukan" },
+  { name: "Kesenian Tradisional", icon: Palette, id: "kesenian" },
+  { name: "Kuliner", icon: Utensils, id: "kuliner" }
 ];
 
 export default function Budaya() {
   const [activeCategory, setActiveCategory] = useState("Semua");
   const [searchQuery, setSearchQuery] = useState("");
+  const location = useLocation();
+
+  // Handle scrolling to section if hash exists
+  useEffect(() => {
+    if (location.hash) {
+      setActiveCategory("Semua");
+      const id = location.hash.replace("#", "");
+      const element = document.getElementById(id);
+      if (element) {
+        setTimeout(() => {
+          element.scrollIntoView({ behavior: "smooth" });
+        }, 100);
+      }
+    }
+  }, [location]);
 
   const filteredData = useMemo(() => {
     return CULTURAL_DATA.filter((item) => {
@@ -49,7 +64,8 @@ export default function Budaya() {
               animate={{ opacity: 1, y: 0 }}
               className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#00A8FF]/10 text-[#00A8FF] text-xs font-bold uppercase tracking-widest mb-6"
             >
-              <Landmark size={14} /> Warisan Budaya Bandung
+              <Landmark size={14} /> 
+              {CULTURAL_DATA.length} Warisan Budaya Bandung
             </motion.div>
             <motion.h1 
               initial={{ opacity: 0, y: 20 }}
@@ -85,30 +101,33 @@ export default function Budaya() {
                 placeholder="Cari budaya..." 
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full bg-white dark:bg-white/5 border border-slate-200 dark:border-white/10 rounded-2xl py-4 pl-12 pr-4 text-slate-800 dark:text-white outline-none focus:ring-2 focus:ring-[#00A8FF]/20 focus:border-[#00A8FF] transition-all backdrop-blur-xl"
+                className="w-full bg-white dark:bg-white/5 border border-slate-200 dark:border-white/10 rounded-2xl py-4 pl-12 pr-4 text-slate-800 dark:text-white outline-none focus:ring-2 focus:ring-[#00A8FF]/20 focus:border-[#00A8FF] transition-all shadow-sm"
               />
             </div>
           </motion.div>
         </div>
 
         {/* Filter Section */}
-        <div className="flex items-center gap-4 overflow-x-auto no-scrollbar pb-8 mb-12">
-            {CATEGORIES.map((cat) => {
+        <div className="flex items-center gap-4 overflow-x-auto no-scrollbar pb-8 mb-12 scroll-smooth">
+            {CATEGORIES.map((cat, idx) => {
               const Icon = cat.icon;
               const isActive = activeCategory === cat.name;
               return (
-                <button
+                <motion.button
                   key={cat.name}
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: idx * 0.05 }}
                   onClick={() => setActiveCategory(cat.name)}
                   className={`flex items-center gap-2 px-6 py-3 rounded-2xl text-sm font-bold transition-all duration-300 whitespace-nowrap border shadow-sm backdrop-blur-xl ${
                     isActive 
                       ? "bg-[#00A8FF] text-white border-[#00A8FF] shadow-xl shadow-[#00A8FF]/30 scale-105" 
-                      : "bg-white dark:bg-white/5 border-slate-200 dark:border-white/10 text-slate-600 dark:text-gray-400 hover:text-slate-900 dark:hover:text-white hover:border-[#00A8FF]/50"
+                      : "bg-white dark:bg-white/5 border-slate-200 dark:border-white/10 text-slate-600 dark:text-gray-400 hover:text-slate-900 dark:hover:text-white hover:border-[#00A8FF]/50 hover:-translate-y-1"
                   }`}
                 >
                   <Icon size={16} />
                   {cat.name}
-                </button>
+                </motion.button>
               );
             })}
         </div>
@@ -124,6 +143,7 @@ export default function Budaya() {
             return (
               <motion.div 
                 key={cat.name} 
+                id={cat.id}
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 className="scroll-mt-32"

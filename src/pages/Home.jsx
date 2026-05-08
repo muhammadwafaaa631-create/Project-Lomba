@@ -5,9 +5,7 @@ import PreferenceSelector from "../components/home/PreferenceSelector";
 import CitySnapshot from "../components/home/CitySnapshot";
 
 import CulinaryCulture from "../components/home/CulinaryCulture";
-import DigitalDashboard from "../components/home/DigitalDashboard";
 import Storytelling from "../components/home/Storytelling";
-import CallToAction from "../components/home/CallToAction";
 import WeatherWidget from "../components/home/WeatherWidget";
 import SmartCityIntro from "../components/home/SmartCityIntro";
 
@@ -40,19 +38,17 @@ export default function Home() {
                                 loop
                                 muted
                                 playsInline
-                                className="w-[100vw] h-[100vh] object-cover opacity-50 dark:opacity-40"
+                                className="w-[100vw] h-[100vh] object-cover opacity-60 dark:opacity-60"
                                 style={{ 
-                                    // Zoom resistance trick: ensure it's always at least filling the screen
                                     minWidth: '100%',
                                     minHeight: '100%',
                                 }}
                             >
                                 <source src="/Bandung malam.mp4" type="video/mp4" />
                             </video>
-                            {/* Dark Mode Overlay */}
-                            <div className="absolute inset-0 bg-black/40" />
-                            {/* Gradient Overlay for scrolling readability */}
-                            <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/60 to-[#0B1120]/95 pointer-events-none" />
+                            {/* Removed/lightened overlays for better clarity per user request */}
+                            <div className="absolute inset-0 bg-black/20" />
+                            <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/30 to-[#0B1120]/90 pointer-events-none" />
                         </motion.div>
                     ) : (
                         <motion.div
@@ -101,8 +97,6 @@ export default function Home() {
                     <CitySnapshot />
 
                     <CulinaryCulture />
-                    <DigitalDashboard />
-                    <CallToAction />
                 </div>
             </div>
 

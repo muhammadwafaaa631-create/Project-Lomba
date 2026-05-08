@@ -35,8 +35,8 @@ export default function Hero() {
       {/* 1. Cinematic Background Overlays (Content focus) */}
       <div className="absolute inset-0 z-0">
         {/* Consistent Gradient Gradients for readability against the dynamic video */}
-        <div className="absolute inset-0 bg-gradient-to-r from-white via-white/40 to-transparent dark:from-black dark:via-black/40 dark:to-transparent z-[1]" />
-        <div className="absolute inset-0 bg-gradient-to-t from-white/80 via-transparent to-transparent dark:from-black/80 dark:via-transparent dark:to-transparent z-[1]" />
+        <div className="absolute inset-0 bg-gradient-to-r from-white via-white/40 to-transparent dark:from-transparent dark:via-transparent dark:to-transparent z-[1]" />
+        <div className="absolute inset-0 bg-gradient-to-t from-white/80 via-transparent to-transparent dark:from-transparent dark:via-transparent dark:to-transparent z-[1]" />
       </div>
 
       <div className="relative z-10 w-full max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-8 items-center">
@@ -55,7 +55,7 @@ export default function Hero() {
             className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-900/5 dark:bg-white/5 border border-slate-900/10 dark:border-white/10 backdrop-blur-md mb-6"
           >
             <span className="w-2 h-2 rounded-full bg-[#00A8FF] animate-pulse" />
-            <span className="text-sm text-slate-600 dark:text-gray-300 font-medium tracking-wide">Platform Smart City v2.0</span>
+            <span className="text-sm text-slate-600 dark:text-gray-100 font-bold tracking-wide">Platform Smart City v2.0</span>
           </motion.div>
 
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight leading-[1.1] mb-6">
@@ -91,7 +91,7 @@ export default function Hero() {
             </Link>
             <Link 
               to="/about"
-              className="bg-slate-900/5 dark:bg-white/5 backdrop-blur-md text-slate-900 dark:text-white px-8 py-3.5 border border-slate-900/10 dark:border-white/10 rounded-full font-semibold hover:bg-slate-900/10 dark:hover:bg-white/10 transition-all hover:border-[#0092E4]/50"
+              className="bg-slate-900/5 dark:bg-black/20 text-slate-900 dark:text-white px-8 py-3.5 border border-slate-900/10 dark:border-white/20 rounded-full font-semibold hover:bg-slate-900/10 dark:hover:bg-white/10 transition-all hover:border-[#0092E4]/50"
             >
               Pelajari Fitur
             </Link>
@@ -129,7 +129,7 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             transition={{ duration: 1, delay: 0.4 }}
             whileHover={{ scale: 1.02 }}
-            className="relative w-full max-w-[340px] bg-white dark:bg-white/5 backdrop-blur-2xl border border-slate-200 dark:border-white/10 rounded-[2rem] p-8 shadow-2xl overflow-hidden group transition-all duration-700 lg:-mt-24"
+            className="relative w-full max-w-[340px] bg-white dark:bg-black/40 border border-slate-200 dark:border-white/20 rounded-[2rem] p-8 shadow-2xl overflow-hidden group transition-all duration-700 lg:-mt-24"
           >
             <div className="absolute inset-0 bg-gradient-to-br from-[#00A8FF]/5 to-transparent transition-opacity group-hover:opacity-20" />
             <div className="relative z-10">
