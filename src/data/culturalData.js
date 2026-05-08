@@ -27,7 +27,8 @@ export const CULTURAL_DATA = [
     title: "Munggahan",
     category: "Tradisi & Kearifan Lokal",
     desc: "Ritual Persiapan Ramadan dengan berkumpul dan makan bersama keluarga.",
-    image: "https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?q=80&w=800",
+    image: "/munggahan1.jpg",
+    gallery: ["/munggahan1.jpg", "/munggahan2.jpg"],
     fullDesc: "Proses Munggahan biasanya melibatkan aktivitas mandi keramas sebagai simbol penyucian fisik dan makan bersama keluarga besar untuk saling memaafkan sebagai bentuk penyucian batin sebelum memasuki bulan suci Ramadan.",
     history: "Berasal dari kata 'Unggah' yang berarti naik atau berpindah ke tempat yang lebih suci. Muncul seiring penyebaran Islam di tanah Pasundan oleh para ulama pada abad ke-15 sebagai media mempererat silaturahmi.",
     location: "Seluruh wilayah pemukiman di Bandung."
@@ -72,7 +73,7 @@ export const CULTURAL_DATA = [
     title: "Sisingaan",
     category: "Seni Pertunjukan",
     desc: "Seni Pikul Singa yang menjadi simbol perlawanan terhadap kolonialisme.",
-    image: "https://upload.wikimedia.org/wikipedia/commons/5/5e/Sisingaan_Subang.jpg",
+    image: "/sisingan.jpg",
     fullDesc: "Singa yang menjadi lambang kebesaran penjajah justru ditunggangi oleh anak kecil, menyimbolkan bahwa generasi masa depan akan memiliki kedaulatan dan mengalahkan penjajah. Pertunjukan ini memadukan ketangkasan bela diri dengan irama musik yang heroik.",
     history: "Lahir di Subang dan menyebar ke Bandung sekitar tahun 1840. Diciptakan sebagai sindiran politik terhadap penjajah Inggris dan Belanda yang menduduki wilayah Jawa Barat pada masa kolonial.",
     location: "Subang dan Kabupaten Bandung."
@@ -82,7 +83,7 @@ export const CULTURAL_DATA = [
     title: "Longser",
     category: "Seni Pertunjukan",
     desc: "Teater Rakyat Komedi yang memadukan hiburan dengan pesan moral sosial.",
-    image: "https://upload.wikimedia.org/wikipedia/commons/3/3f/Longser_Sunda.jpg",
+    image: "/longser'.jpg",
     fullDesc: "Pertunjukan ini awalnya dilakukan di pinggir jalan dengan obor sebagai penerangan, tanpa panggung formal. Longser dikenal karena interaksinya yang sangat cair antara pemain dan penonton, seringkali mengangkat kritik sosial dengan gaya jenaka.",
     history: "Populer di Bandung sekitar tahun 1915. Nama ini diyakini berasal dari kata 'Melong' (melihat) dan 'Seredet' (terpikat), menggambarkan daya tarik pertunjukannya bagi siapa pun yang menonton.",
     location: "Gedung Kesenian Rumentang Siang atau pusat kebudayaan."
@@ -92,7 +93,7 @@ export const CULTURAL_DATA = [
     title: "Tari Merak Sunda",
     category: "Seni Pertunjukan",
     desc: "Tari Estetika Burung Merak yang menggambarkan keindahan rupa dan gerak.",
-    image: "https://upload.wikimedia.org/wikipedia/commons/8/8c/Tari_Merak_West_Java.jpg",
+    image: "/merak-sunda.jpg",
     fullDesc: "Gerakan dalam tarian ini meniru perilaku burung merak jantan yang sedang memamerkan keindahan bulu sayapnya untuk menarik perhatian. Tarian ini menonjolkan keindahan kostum yang berwarna-warni dan gerakan yang sangat artistik.",
     history: "Diciptakan oleh maestro Raden Tjetje Somantri pada tahun 1950. Ia mengadaptasi gerakan tari tradisional yang kaku menjadi lebih dinamis dan visual untuk menghibur tamu kenegaraan.",
     location: "Saung Angklung Udjo atau pertunjukan resmi kenegaraan."
@@ -102,7 +103,7 @@ export const CULTURAL_DATA = [
     title: "Kecapi Suling",
     category: "Seni Pertunjukan",
     desc: "Musik Instrumen Meditatif yang menenangkan jiwa dengan harmoni bambu dan dawai.",
-    image: "https://upload.wikimedia.org/wikipedia/commons/7/70/Kacapi_suling.jpg",
+    image: "/kecap suling.jpg",
     fullDesc: "Awalnya merupakan musik meditatif yang eksklusif di lingkungan istana, namun seiring waktu beradaptasi menjadi musik pengiring puisi rakyat (Pantun Sunda) dan hiburan bagi masyarakat umum yang mencari ketenangan jiwa.",
     history: "Perangkat musik tertua di tanah Sunda yang sudah ada sejak masa kerajaan Pajajaran. Memadukan petikan dawai kecapi dengan tiupan suling bambu sebagai representasi harmoni alam.",
     location: "Hotel-hotel bernuansa tradisional atau restoran di Bandung."
@@ -112,7 +113,7 @@ export const CULTURAL_DATA = [
     title: "Kuda Renggeng",
     category: "Seni Pertunjukan",
     desc: "Atraksi Kuda Menari yang mengikuti ketukan musik tradisional.",
-    image: "https://upload.wikimedia.org/wikipedia/commons/4/4f/Kuda_Renggong_Subang.jpg",
+    image: "/kuda-renggeng.jpg",
     fullDesc: "Dalam pertunjukan ini, kuda dilatih secara khusus untuk 'menari' mengikuti irama musik kendang dan terompet. Atraksi ini biasanya menjadi tontonan utama dalam merayakan keberanian anak-anak di pedesaan tanah Pasundan.",
     history: "Berasal dari Sumedang dan populer di Bandung pada awal abad ke-20. Dahulu digunakan untuk menjemput tamu kehormatan atau merayakan keberanian anak yang baru saja dikhitan (disunat).",
     location: "Kawasan Kabupaten Bandung dan Sumedang."
@@ -122,7 +123,7 @@ export const CULTURAL_DATA = [
     title: "Tari Ketuk Tilu",
     category: "Seni Pertunjukan",
     desc: "Tari Pergaulan Rakyat yang menjadi cikal bakal populernya Tari Jaipong.",
-    image: "https://upload.wikimedia.org/wikipedia/commons/6/6a/Ketuk_Tilu_dance.jpg",
+    image: "/tari-ketuk-tilu.jpg",
     fullDesc: "Ketuk Tilu adalah tarian komunal yang sangat kuno, awalnya sebagai ritual persembahan untuk Dewi Padi saat panen raya. Tarian ini penuh dengan interaksi sosial dan kegembiraan antara para penari dan masyarakat yang menonton.",
     history: "Nama diambil dari bunyi instrumen bonang yang berjumlah tiga buah (tilu). Tarian ini adalah akar atau fondasi utama dari pengembangan Tari Jaipong yang lebih populer di masa kini.",
     location: "Pusat-pusat kesenian tradisional di Jawa Barat."
@@ -134,7 +135,7 @@ export const CULTURAL_DATA = [
     title: "Angklung",
     category: "Kesenian Tradisional",
     desc: "Alat musik bambu yang menghasilkan nada diatonis dan telah diakui UNESCO.",
-    image: "https://upload.wikimedia.org/wikipedia/commons/0/0d/Angklung.jpg",
+    image: "/angklung.jpg",
     fullDesc: "Angklung adalah alat musik yang membutuhkan kerjasama kolektif untuk menghasilkan harmoni yang indah. Setiap pemain memegang satu bambu yang mewakili satu nada, mencerminkan nilai persatuan dalam masyarakat Sunda.",
     history: "Alat musik purba yang awalnya bernada pentatonis. Pada tahun 1938, Daeng Soetigna di Bandung memodifikasi angklung menjadi bernada diatonis (Do-Re-Mi) agar bisa memainkan lagu modern, hingga diakui UNESCO pada 2010.",
     location: "Saung Angklung Udjo, Jalan Padasuka No. 118, Bandung."
@@ -144,7 +145,7 @@ export const CULTURAL_DATA = [
     title: "Wayang Golek",
     category: "Kesenian Tradisional",
     desc: "Teater Boneka Kayu 3D dengan cerita kepahlawanan dan kritikan sosial.",
-    image: "https://upload.wikimedia.org/wikipedia/commons/2/2f/Wayang_Golek.jpg",
+    image: "/wayang golek.jpg",
     fullDesc: "Penyebar agama di masa lalu memilih versi kayu (golek) agar lebih mudah dipahami oleh masyarakat Sunda yang menyukai seni pahat tiga dimensi. Pertunjukan ini selalu menyisipkan humor melalui tokoh Cepot dan Dawala.",
     history: "Merupakan adaptasi dari Wayang Kulit Jawa Tengah. Sunan Kudus membawa versi golek ini ke Jawa Barat pada abad ke-16 sebagai media dakwah yang sesuai dengan selera estetika lokal.",
     location: "Gedung Kesenian Rumentang Siang atau acara-acara pesta rakyat."
@@ -154,7 +155,7 @@ export const CULTURAL_DATA = [
     title: "Tari Jaipong",
     category: "Kesenian Tradisional",
     desc: "Tari Kontemporer Energik yang menggabungkan pencak silat dengan ketuk tilu.",
-    image: "https://upload.wikimedia.org/wikipedia/commons/1/1b/Jaipongan_dance.jpg",
+    image: "/jaipong.jpg",
     fullDesc: "Jaipong muncul sebagai gerakan 'kontra-budaya' terhadap dominasi musik Barat yang dilarang pada era tersebut. Tarian ini menggabungkan elemen bela diri silat, ketuk tilu, dan tari topeng menjadi kesatuan gerak yang dinamis.",
     history: "Diciptakan oleh Gugum Gumbira pada tahun 1976 di Bandung sebagai upaya merevitalisasi kesenian rakyat Sunda menjadi tontonan yang atraktif dan modern di panggung pertunjukan.",
     location: "Sanggar tari maupun panggung pertunjukan seni budaya di Bandung."
@@ -164,7 +165,7 @@ export const CULTURAL_DATA = [
     title: "Kesenian Reak",
     category: "Kesenian Tradisional",
     desc: "Seni trans-ritual dari Bandung Timur yang menggabungkan elemen spiritual.",
-    image: "https://upload.wikimedia.org/wikipedia/commons/9/9b/Reak_Sunda.jpg",
+    image: "/reak.jpg",
     fullDesc: "Pertunjukan ini merupakan penggabungan elemen kuda lumping, barongan, dan puji-pujian islami. Seringkali melibatkan kondisi trans atau meditasi mendalam yang memamerkan kekuatan spiritual para penarinya.",
     history: "Seni trans-ritual dari Bandung Timur. Awalnya digunakan untuk mengusir roh jahat di perkebunan karet dan sebagai bagian dari ritual kebersihan desa agar terhindar dari malapetaka.",
     location: "Wilayah Bandung Timur (Cibiru dan Ujungberung)."
@@ -174,7 +175,7 @@ export const CULTURAL_DATA = [
     title: "Benjang",
     category: "Kesenian Tradisional",
     desc: "Gulat Tradisional Sunda yang memadukan kekuatan fisik dengan kemeriahan musik.",
-    image: "https://upload.wikimedia.org/wikipedia/commons/5/5c/Benjang_traditional.jpg",
+    image: "/benjang.jpg",
     fullDesc: "Awalnya adalah latihan ketangkasan fisik pemuda desa untuk bela diri, namun berubah menjadi seni pertunjukan yang diiringi musik terompet. Pertarungan benjang sangat sportif dan menjunjung tinggi kehormatan sesama pemain.",
     history: "Berkembang di wilayah Ujung Berung sejak abad ke-19. Gulat ini merupakan warisan ketangkasan para jawara (pendekar) Sunda yang kemudian dikemas menjadi pertunjukan hiburan rakyat.",
     location: "Acara pesta rakyat tahunan di kawasan Ujungberung."
@@ -184,7 +185,7 @@ export const CULTURAL_DATA = [
     title: "Calung",
     category: "Kesenian Tradisional",
     desc: "Musik Bambu Pukul yang dimainkan dengan cara dipukul bilah-bilah bambunya.",
-    image: "https://upload.wikimedia.org/wikipedia/commons/e/e3/Calung_instrument.jpg",
+    image: "/calung.jpg",
     fullDesc: "Dahulu digunakan petani saat menunggu panen di sawah di malam hari sebagai hiburan sekaligus pengusir hewan liar. Calung dimainkan secara kelompok dengan sinkronisasi ketukan yang sangat cepat dan rumit.",
     history: "Calung merupakan saudara dari Angklung, namun dimainkan dengan cara dipukul bilah-bilahnya. Berasal dari tradisi agraris masyarakat Jawa Barat sebagai media ekspresi kegembiraan.",
     location: "Sentra kerajinan bambu dan sanggar seni tradisional."
@@ -196,7 +197,7 @@ export const CULTURAL_DATA = [
     title: "Batagor",
     category: "Kuliner",
     desc: "Bakso Tahu Goreng legendaris dengan saus kacang gurih yang mendunia.",
-    image: "https://upload.wikimedia.org/wikipedia/commons/2/2c/Batagor.jpg",
+    image: "/MAKANAN/batagor.webp",
     fullDesc: "Diciptakan sebagai solusi agar sisa dagangan bakso tahu kukus tidak mubazir. Dengan cara digoreng garing dan disiram bumbu kacang, inovasi ini meledak dan menjadi ikon utama kuliner Kota Bandung.",
     history: "Nama merupakan akronim dari Bakso Tahu Goreng. Diciptakan oleh H. Isan pada tahun 1973 yang terinspirasi untuk menggoreng sisa bakso tahunya agar tetap nikmat dikonsumsi.",
     location: "Batagor Kingsley, Kingsley Riri, dan Jalan Burangrang."
@@ -206,7 +207,7 @@ export const CULTURAL_DATA = [
     title: "Mie Kocok",
     category: "Kuliner",
     desc: "Mie Kaldu Kikil Sapi khas Bandung dengan proses pembuatan yang unik.",
-    image: "https://upload.wikimedia.org/wikipedia/commons/7/7a/Mie_kocok.jpg",
+    image: "/MAKANAN/mie-kocok.webp",
     fullDesc: "Mie kocok menggunakan kaldu kental dari kikil dan kaki sapi yang gurih, mencerminkan kearifan lokal dalam memanfaatkan seluruh bagian hewan dalam masakan. Disajikan dengan tauge segar dan jeruk limau.",
     history: "Nama berasal dari proses pembuatannya di mana mie 'dikocok' di dalam air panas sebelum disajikan. Populer setelah era kemerdekaan (1950-an) dan menjadi bagian tak terpisahkan dari sarapan warga Bandung.",
     location: "Mie Kocok Mang Dadeng dan sentra kuliner kaki lima Bandung."
@@ -216,7 +217,7 @@ export const CULTURAL_DATA = [
     title: "Seblak",
     category: "Kuliner",
     desc: "Kerupuk Basah Pedas Kencur yang menjadi favorit para pecinta makanan pedas.",
-    image: "https://upload.wikimedia.org/wikipedia/commons/3/3a/Seblak_bandung.jpg",
+    image: "/MAKANAN/seblak.png",
     fullDesc: "Awalnya adalah cara kreatif memanfaatkan kerupuk mentah yang tidak laku terjual dengan cara direbus. Ciri khas utamanya adalah aroma kencur yang sangat kuat dan tingkat kepedasan yang bisa disesuaikan.",
     history: "Nama berasal dari kata 'Nyeblak' (kaget/pedas menyengat). Muncul di wilayah Bandung Selatan pada era 90-an sebagai inovasi kuliner jalanan yang kemudian menjadi tren nasional.",
     location: "Kawasan Dipatiukur dan berbagai sudut jalanan Kota Bandung."
@@ -226,7 +227,7 @@ export const CULTURAL_DATA = [
     title: "Surabi",
     category: "Kuliner",
     desc: "Pancake Tradisional Tanah Liat yang dibakar dengan tungku arang tradisional.",
-    image: "https://upload.wikimedia.org/wikipedia/commons/0/0f/Serabi.jpg",
+    image: "/MAKANAN/surabi.webp",
     fullDesc: "Keunikannya adalah dimasak di atas tungku tanah liat menggunakan arang, yang memberikan aroma asap (smoky) alami yang khas. Kini tersedia dalam varian rasa modern namun tetap menjaga cara memasak tradisionalnya.",
     history: "Nama dari kata 'Sura' (besar/luar biasa). Kuliner tradisional berbahan tepung beras yang sudah populer sejak zaman kolonial dan masih bertahan hingga saat ini sebagai legenda kuliner tanah air.",
     location: "Surabi Enhii (Jalan Setiabudhi) dan kawasan kuliner malam."
@@ -236,7 +237,7 @@ export const CULTURAL_DATA = [
     title: "Peuyeum",
     category: "Kuliner",
     desc: "Singkong Fermentasi Khas Bandung yang memiliki rasa manis legit.",
-    image: "https://upload.wikimedia.org/wikipedia/commons/6/6b/Peuyeum.jpg",
+    image: "/MAKANAN/peuyeum.webp",
     fullDesc: "Peuyeum Bandung menggunakan ragi khusus yang membuat hasil fermentasi singkong tetap kokoh di luar namun sangat lembut dan manis di dalam. Sering digantung di kios-kios sebagai ciri khas oleh-oleh Bandung.",
     history: "Diproduksi secara massal sejak jalur kereta api Jakarta-Bandung dibuka pada abad ke-19. Menjadi komoditas unggulan bagi para pelancong yang berkunjung ke Bandung melalui jalur kereta.",
     location: "Sentra oleh-oleh Cihampelas dan Pasar Baru Bandung."
@@ -246,9 +247,49 @@ export const CULTURAL_DATA = [
     title: "Cuanki",
     category: "Kuliner",
     desc: "Bakso Siomay Pikul Jalan Kaki yang disantap hangat dengan kuah bening.",
-    image: "https://upload.wikimedia.org/wikipedia/commons/4/45/Cuanki.jpg",
+    image: "/MAKANAN/cuanki.webp",
     fullDesc: "Merupakan bentuk adaptasi 'Bakso Malang' yang dibawa ke Bandung, namun dimodifikasi oleh pedagang lokal dengan menambahkan lebih banyak siomay kering dan tahu tanpa menggunakan mie kuning.",
     history: "Singkatan dari 'Cari Uang Jalan Kaki', merujuk pada kebiasaan pedagang yang memikul dagangannya berkeliling. Muncul sekitar tahun 1980-an dan menjadi jajanan favorit sore hari.",
     location: "Cuanki Serayu, Jalan Serayu No.2, Bandung."
+  },
+  {
+    id: 25,
+    title: "Roti Gempol",
+    category: "Kuliner",
+    desc: "Roti Bakar Legendaris sejak 1958 dengan tekstur roti gandum yang khas.",
+    image: "/MAKANAN/gempol.png",
+    fullDesc: "Terkenal dengan roti gandumnya yang tebal namun lembut saat dibakar. Menjadi primadona sarapan warga Bandung selama puluhan tahun dengan isian manis maupun asin seperti keju dan telur.",
+    history: "Didirikan di Jalan Gempol pada akhir era 50-an. Tetap mempertahankan cara membakar roti yang tradisional menggunakan mentega berkualitas tinggi, menjadikannya warisan kuliner yang tak lekang oleh waktu.",
+    location: "Jalan Gempol Kulon No.14, Citarum, Bandung."
+  },
+  {
+    id: 26,
+    title: "Pisang Bolen",
+    category: "Kuliner",
+    desc: "Pastry Pisang Keju khas Bandung yang menjadi oleh-oleh wajib.",
+    image: "/MAKANAN/bolen.jpg",
+    fullDesc: "Kudapan pastry berlapis (puff pastry) yang berisi potongan pisang manis dan keju gurih. Teksturnya yang renyah di luar dan lembut di dalam menjadikannya salah satu ikon modern kuliner Bandung.",
+    history: "Dipopulerkan oleh Kartika Sari pada tahun 1984. Resep aslinya terinspirasi dari pastry Belanda namun disesuaikan dengan lidah lokal dengan menggunakan pisang raja yang manis.",
+    location: "Kartika Sari, Prima Rasa, dan berbagai gerai pusat oleh-oleh."
+  },
+  {
+    id: 27,
+    title: "Brownies Kukus",
+    category: "Kuliner",
+    desc: "Brownies Cokelat Lembut yang dimasak dengan cara dikukus.",
+    image: "/brownies.webp",
+    fullDesc: "Berbeda dengan brownies panggang yang padat, brownies kukus memiliki tekstur yang sangat moist dan lembut seperti spons. Cokelatnya yang pekat memberikan rasa yang sangat mewah bagi para pecinta dessert.",
+    history: "Menjadi fenomena kuliner di Bandung pada awal tahun 2000-an melalui brand Amanda. Inovasi metode kukus ini mengubah pandangan masyarakat terhadap kue brownies yang biasanya keras.",
+    location: "Amanda Brownies dan berbagai toko kue di Bandung."
+  },
+  {
+    id: 28,
+    title: "Lumpia Basah",
+    category: "Kuliner",
+    desc: "Jajanan Gerobak Lumpia tanpa digoreng dengan isian rebung dan bengkuang.",
+    image: "/MAKANAN/lumpia-basah.jpg",
+    fullDesc: "Keunikan lumpia ini adalah kulitnya yang tidak digoreng, melainkan disajikan basah dengan isian tauge, telur, dan irisan bengkuang yang dimasak dengan gula merah cair yang kental.",
+    history: "Merupakan adaptasi lokal dari lumpia Semarang. Di Bandung, masyarakat lebih menyukai tekstur yang 'basah' dan manis dari saus kanji gula merah, yang kemudian menjadi ciri khas jajanan sekolah.",
+    location: "Berbagai sudut jalanan di Bandung (kawasan Ganesha dan Dipatiukur)."
   }
 ];
