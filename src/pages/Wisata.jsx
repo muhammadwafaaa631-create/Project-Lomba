@@ -162,7 +162,7 @@ export default function Wisata() {
         </div>
 
         {/* 7. Search & Filter UI (Floating over map) */}
-        <div className="absolute top-6 left-0 w-full z-[1000] px-4 pointer-events-none mt-[80px]">
+        <div className="absolute top-6 left-0 w-full z-[500] px-4 pointer-events-none mt-[80px]">
           <div className="max-w-4xl mx-auto flex flex-col items-center pointer-events-auto">
             
             {/* Search Bar */}
@@ -227,7 +227,7 @@ export default function Wisata() {
               transition={{ type: "spring", stiffness: 300, damping: 25 }}
               className="absolute bottom-6 left-1/2 -translate-x-1/2 md:left-auto md:right-10 md:translate-x-0 md:top-1/2 md:-translate-y-1/2 z-[1000] w-[calc(100%-2rem)] md:w-72 max-w-[280px] pointer-events-auto"
             >
-              <div className="relative bg-white/95 dark:bg-slate-900/95 backdrop-blur-xl rounded-[2rem] shadow-[0_20px_60px_-15px_rgba(0,0,0,0.3)] overflow-hidden border border-slate-200 dark:border-white/10">
+              <div className="relative bg-white/95 dark:bg-slate-900/95 backdrop-blur-xl rounded-[2rem] shadow-[0_20px_60px_-15px_rgba(0,0,0,0.3)] overflow-hidden border border-slate-200 dark:border-white/10 z-[1001]">
                 
                 {/* Close Button */}
                 <button 
@@ -297,7 +297,7 @@ export default function Wisata() {
               animate={{ y: 0, opacity: 1 }}
               exit={{ y: 200, opacity: 0 }}
               transition={{ type: "spring", stiffness: 250, damping: 25 }}
-              className="absolute bottom-6 left-0 w-full z-[1000] pointer-events-none"
+              className="absolute bottom-6 left-0 w-full z-[1002] pointer-events-none"
             >
               <div 
                 ref={carouselRef}

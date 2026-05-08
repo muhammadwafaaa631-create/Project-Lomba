@@ -279,7 +279,7 @@ const HistoryPageLayout = ({
                     className="max-w-4xl mx-auto px-6 mt-32 text-center"
                 >
                     <div className="bg-gradient-to-br from-blue-600 to-indigo-700 rounded-[3rem] p-12 overflow-hidden relative group">
-                        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1549473889-14f410d83298?q=80&w=1200')] bg-cover bg-center opacity-10 group-hover:scale-110 transition-transform duration-[5s]" />
+                        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1549473889-14f410d83298?q=80&w=1200&h=1200')] bg-cover bg-center opacity-10 group-hover:scale-110 transition-transform duration-[5s]" />
                         <div className="relative z-10">
                             <h3 className="text-3xl md:text-4xl font-black text-white mb-6">Rasakan Sejarahnya Secara Langsung</h3>
                             <p className="text-blue-100 mb-10 text-lg font-light max-w-xl mx-auto leading-relaxed">
