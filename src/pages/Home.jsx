@@ -3,6 +3,8 @@ import StatSection from "../components/home/StatSection";
 import TripPlanner from "../components/home/TripPlanner";
 import PreferenceSelector from "../components/home/PreferenceSelector";
 import CitySnapshot from "../components/home/CitySnapshot";
+import HomeGrid from "../components/home/HomeGrid";
+import DigitalDashboard from "../components/home/DigitalDashboard";
 
 import CulinaryCulture from "../components/home/CulinaryCulture";
 import Storytelling from "../components/home/Storytelling";
@@ -11,8 +13,6 @@ import SmartCityIntro from "../components/home/SmartCityIntro";
 
 import { useTheme } from "../context/ThemeContext";
 import { motion, AnimatePresence } from "framer-motion";
-
-
 
 export default function Home() {
     const { theme } = useTheme();
@@ -46,7 +46,6 @@ export default function Home() {
                             >
                                 <source src="/Bandung malam.mp4" type="video/mp4" />
                             </video>
-                            {/* Removed/lightened overlays for better clarity per user request */}
                             <div className="absolute inset-0 bg-black/20" />
                             <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/30 to-[#0B1120]/90 pointer-events-none" />
                         </motion.div>
@@ -72,7 +71,6 @@ export default function Home() {
                             >
                                 <source src="/Bandung pagi.mp4" type="video/mp4" />
                             </video>
-                            {/* Light Mode Overlay for readability without blurring the video */}
                             <div className="absolute inset-0 bg-white/50" />
                         </motion.div>
                     )}
@@ -81,7 +79,8 @@ export default function Home() {
 
             <div className="relative z-10">
                 <Hero />
-                <section className="px-6 -mt-16 mb-8 relative z-20">
+                
+                <section className="px-6 relative z-20 mb-8">
                     <div className="max-w-7xl mx-auto">
                         <WeatherWidget />
                     </div>
@@ -90,11 +89,12 @@ export default function Home() {
                 <div className="relative z-10 w-full flex flex-col pt-16 mt-12 drop-shadow-sm bg-[#FDFBF7] dark:bg-[#030303] rounded-t-[3rem] 2xl:rounded-t-[4rem] shadow-2xl transition-colors duration-700 border-t border-slate-200 dark:border-white/5 pb-24">
                     <StatSection />
 
-                    
                     <SmartCityIntro />
-
                     
+                    <HomeGrid />
                     <CitySnapshot />
+                    
+                    <DigitalDashboard />
 
                     <CulinaryCulture />
                 </div>
@@ -102,4 +102,4 @@ export default function Home() {
 
         </div>
     );
-}
+}
