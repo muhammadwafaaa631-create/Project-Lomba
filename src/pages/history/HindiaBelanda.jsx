@@ -1,4 +1,9 @@
 import HistoryPageLayout from "../../components/history/HistoryPageLayout";
+import bandungKolonialImg from "../../assets/history/Bandung-Kolonial.jpg";
+import rothImg from "../../assets/history/roth.jpg";
+import gerberImg from "../../assets/history/J. Gerber.jpg";
+import schoemakerImg from "../../assets/history/Wolff Schoemaker.webp";
+import zamanEmasImg from "../../assets/history/Zaman Emas.jpg";
 
 export default function HindiaBelanda() {
     const theme = {
@@ -13,7 +18,7 @@ export default function HindiaBelanda() {
         hero: {
             subtitle: "Masa Kolonial",
 
-            bgImage: "https://images.unsplash.com/photo-1596431940175-3bb7242c163b?auto=format&fit=crop&q=80&w=2000"
+            bgImage: bandungKolonialImg
         },
         timeline: [
             {
@@ -22,14 +27,14 @@ export default function HindiaBelanda() {
                 title: "Otonomi Kotapraja Bandung",
                 description: "Bandung secara resmi ditetapkan sebagai kotamadya (gemeente) yang mandiri, memulai pembangunan kota modern.",
                 longDescription: "Status ini memungkinkan pemerintah lokal mengelola anggaran sendiri untuk infrastruktur, penerangan jalan, dan sanitasi yang mengubah Bandung menjadi kota paling bersih di Hindia Belanda.",
-                image: "https://images.unsplash.com/photo-1605335133642-45452d9a33bb?auto=format&fit=crop&q=80&w=800",
+                image: bandungKolonialImg,
                 impactText: "Meluncurkan standar perencanaan kota skala besar pertama di Indonesia.",
                 impactPoints: [
                     { title: "Infrastruktur", text: "Pembangunan sistem drainase dan jaringan jalan modern." },
                     { title: "Eropa Kecil", text: "Dimulainya pembangunan kawasan pemukiman elit bergaya Barat." }
                 ],
                 figures: [
-                    { name: "Roth", role: "Pengusaha", desc: "Seseorang yang mempromosikan keindahan Bandung ke dunia luar.", image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=200" }
+                    { name: "Roth", role: "Pengusaha", desc: "Seseorang yang mempromosikan keindahan Bandung ke dunia luar.", image: rothImg }
                 ],
                 facts: [
                     { title: "Fun Fact: Paris van Java", text: "Julukan 'Paris van Java' awalnya disematkan bukan murni karena fesyen, melainkan untuk menarik wisatawan Eropa ke pasar malam jaarbeurs tahunan di Bandung agar terasa se-glamor Paris." }
@@ -42,14 +47,14 @@ export default function HindiaBelanda() {
                 title: "Rencana Menjadi Ibukota Kolonial",
                 description: "Pemerintah Belanda sempat merencanakan pemindahan ibukota dari Batavia ke Bandung karena udaranya yang lebih sejuk.",
                 longDescription: "Gedung Sate dibangun sebagai kantor Departemen Pekerjaan Umum, bagian dari megaproyek pemindahan pusat administrasi negara ke dataran tinggi yang lebih sehat.",
-                image: "https://images.unsplash.com/photo-1590424600649-ceb5b31e9233?auto=format&fit=crop&q=80&w=800",
+                image: bandungKolonialImg,
                 impactText: "Mewariskan gedung-gedung monumental berskala nasional di Bandung.",
                 impactPoints: [
                     { title: "Sentra Intelektual", text: "Berdirinya ITB (Technische Hoogeschool) sebagai institusi teknik tertua di Indonesia." },
                     { title: "Pusat Militer", text: "Relokasi pusat komando militer ke wilayah Cimahi dan Bandung." }
                 ],
                 figures: [
-                    { name: "J. Gerber", role: "Arsitek", desc: "Perancang utama Gedung Sate yang ikonik.", image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=200" }
+                    { name: "J. Gerber", role: "Arsitek", desc: "Perancang utama Gedung Sate yang ikonik.", image: gerberImg }
                 ],
                 facts: [
                     { title: "Fun Fact: Ornamen Sate", text: "Enam buah 'tusuk sate' pada puncak Gedung Sate konon melambangkan biaya 6 juta gulden yang dihabiskan untuk pembangunannya." }
@@ -62,14 +67,14 @@ export default function HindiaBelanda() {
                 title: "Zaman Emas Arsitektur Modern",
                 description: "Periode dimana gaya arsitektur Art Deco memuncak, menghadirkan mahakarya seperti Villa Isola dan Savoy Homann.",
                 longDescription: "Bandung menjadi laboratorium arsitektur dunia. Para arsitek Belanda menggabungkan teknologi modern dengan elemen tropis, menciptakan gaya ssitektur 'Indisch' yang unik.",
-                image: "https://images.unsplash.com/photo-1612470659837-14283b9c9ca3?auto=format&fit=crop&q=80&w=800",
+                image: zamanEmasImg,
                 impactText: "Menjadikan Bandung sebagai salah satu kota dengan koleksi Art Deco terbanyak di dunia.",
                 impactPoints: [
                     { title: "Gaya Hidup", text: "Jalan Braga menjadi pusat fesyen dan hiburan kelas atas." },
                     { title: "Turisme", text: "Bandung mulai dikenal secara internasional sebagai destinasi wisata tropis premium." }
                 ],
                 figures: [
-                    { name: "Wolff Schoemaker", role: "Arsitek Jenius", desc: "Guru dari Ir. Soekarno yang banyak merancang gedung Art Deco di Bandung.", image: "https://images.unsplash.com/photo-1552058544-f2b08422138a?auto=format&fit=crop&q=80&w=200" }
+                    { name: "Wolff Schoemaker", role: "Arsitek Jenius", desc: "Guru dari Ir. Soekarno yang banyak merancang gedung Art Deco di Bandung.", image: schoemakerImg }
                 ],
                 facts: [
                     { title: "Fun Fact: Braga Fashion", text: "Di era ini, pakaian mode terbaru dari Paris konon langsung dipajang di etalase toko-toko Jalan Braga hanya berselang seminggu setelah diluncurkan." }

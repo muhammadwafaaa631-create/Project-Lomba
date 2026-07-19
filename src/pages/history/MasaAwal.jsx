@@ -1,6 +1,10 @@
 import HistoryPageLayout from "../../components/history/HistoryPageLayout";
 import tatarUkurImg from "../../assets/history/tatar_ukur.png";
 import dayeuhkolotImg from "../../assets/history/dayeuhkolot.png";
+import manusiaPurbaImg from "../../assets/history/MANUSIA-PURBA.webp";
+import zamanEmasImg from "../../assets/history/Zaman Emas.jpg";
+import bandungKolonialImg from "../../assets/history/Bandung-Kolonial.jpg";
+import raWiranatakusumah from "../../assets/history/R.A. Wiranatakusumah II.webp";
 
 export default function MasaAwal() {
     const theme = {
@@ -14,7 +18,7 @@ export default function MasaAwal() {
     const content = {
         hero: {
             subtitle: "Masa Awal",
-            bgImage: "https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&q=80&w=2000"
+            bgImage: manusiaPurbaImg
         },
 
         timeline: [
@@ -24,14 +28,14 @@ export default function MasaAwal() {
                 title: "Asal-usul Kata 'Bandung'",
                 description: "Nama 'Bandung' diyakini berasal dari kata 'bendung', merujuk pada terbendungnya Sungai Citarum purba oleh lava Gunung Tangkuban Parahu.",
                 longDescription: "Selain itu, terdapatversi sejarah terkait kendaraan air 'Perahu Bandung', yakni dua perahu yang diikat berdampingan. Perahu ini digunakan oleh Bupati Bandung, R.A. Wiranatakusumah II untuk melayari Sungai Citarum saat mencari lokasi ibukota kabupaten yang baru.",
-                image: "https://images.unsplash.com/photo-1627705191833-289b52a12513?auto=format&fit=crop&q=80&w=800",
+                image: manusiaPurbaImg,
                 impactText: "Etimologi ini merefleksikan ikatan kuat antara perkembangan kota dengan kondisi geologis serta filosofi kebersamaan (berdampingan).",
                 impactPoints: [
                     { title: "Filosofi 'Bendung'", text: "Melambangkan peradaban yang tumbuh dan bertahan di bekas bendungan alam purba." },
                     { title: "Perahu Bandung", text: "Menjadi simbol perjalanan historis perpindahan pusat pemerintahan awal." }
                 ],
                 figures: [
-                    { name: "R.A. Wiranatakusumah II", role: "Bupati Bandung Ke-6", desc: "Pendiri Kota Bandung yang melakukan penjelajahan dengan Perahu Bandung.", image: "https://images.unsplash.com/photo-1544473244-f6895e69ce8d?auto=format&fit=crop&q=80&w=200" }
+                    { name: "R.A. Wiranatakusumah II", role: "Bupati Bandung Ke-6", desc: "Pendiri Kota Bandung yang melakukan penjelajahan dengan Perahu Bandung.", image: raWiranatakusumah }
                 ],
                 facts: [
                     { title: "Perahu Bandung", text: "Terdiri dari dua perahu lesung yang dirangkaikan menjadi satu, digunakan melintasi Citarum." }
@@ -44,14 +48,14 @@ export default function MasaAwal() {
                 title: "Terbentuknya Cekungan Purba",
                 description: "Ribuan tahun lalu, dataran Bandung adalah sebuah danau raksasa yang dikenal sebagai Danau Purba Bandung, hasil dari letusan dahsyat Gunung Sunda.",
                 longDescription: "Secara geologis, letusan ini membendung Sungai Citarum, menciptakan kaldera besar yang terisi air. Wilayah ini menjadi embrio kehidupan di pegunungan Jawa Barat.",
-                image: "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&q=80&w=800",
+                image: zamanEmasImg,
                 impactText: "Transformasi geologis ini menciptakan tanah vulkanik yang sangat subur bagi peradaban mendatang.",
                 impactPoints: [
                     { title: "Kesuburan Tanah", text: "Endapan dasar danau menciptakan lahan pertanian terbaik di Jawa." },
                     { title: "Mitologi Lokal", text: "Melahirkan legenda Sangkuriang sebagai memori kolektif masyarakat." }
                 ],
                 figures: [
-                    { name: "Manusia Purba", role: "Pionir", desc: "Komunitas awal yang mendiami gua-gua di perbukitan sekitar danau.", image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=200" }
+                    { name: "Manusia Purba", role: "Pionir", desc: "Komunitas awal yang mendiami gua-gua di perbukitan sekitar danau.", image: manusiaPurbaImg }
                 ],
                 facts: [
                     { title: "Sangkuriang", text: "Legenda ini dianggap sebagai rekaman lisan peristiwa jebolnya bendungan alami sungai Citarum." }
@@ -73,7 +77,7 @@ export default function MasaAwal() {
                     { title: "Jalur Upeti", text: "Terbentuknya jalur distribusi tradisional ke pusat kerajaan." }
                 ],
                 figures: [
-                    { name: "Prabu Geusan Ulun", role: "Raja Sumedang Larang", desc: "Pemimpin yang mewarisi kekuasaan Pajajaran di wilayah ini.", image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=200" }
+                    { name: "Prabu Geusan Ulun", role: "Raja Sumedang Larang", desc: "Pemimpin yang mewarisi kekuasaan Pajajaran di wilayah ini.", image: bandungKolonialImg }
                 ],
                 facts: [
                     { title: "Benteng Alami", text: "Hutan lebat dan pegunungan menjadikan Bandung benteng perlindungan alami kerajaan." }
@@ -96,7 +100,7 @@ export default function MasaAwal() {
                     { title: "Hubungan Mataram", text: "Pengaruh politik Mataram mulai memperkuat struktur pemerintahan lokal." }
                 ],
                 figures: [
-                    { name: "Wiraangunangun", role: "Bupati I", desc: "Peletak dasar birokrasi pemerintahan Kabupaten Bandung.", image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=200" }
+                    { name: "Wiraangunangun", role: "Bupati I", desc: "Peletak dasar birokrasi pemerintahan Kabupaten Bandung.", image: bandungKolonialImg }
                 ],
                 facts: [
                     { title: "Arti Krapyak", text: "Krapyak berarti pagar kayu atau kandang, merujuk pada area perburuan raja yang dipagari." }

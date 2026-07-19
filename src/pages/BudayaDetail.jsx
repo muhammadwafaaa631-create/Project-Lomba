@@ -2,6 +2,7 @@ import { useParams, Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ChevronLeft, Landmark, History, MapPin, Share2 } from "lucide-react";
 import { CULTURAL_DATA } from "../data/culturalData";
+import { getCulturalImage, getCulturalGallery } from "../utils/imageHelper";
 import { useEffect } from "react";
 
 export default function BudayaDetail() {
@@ -35,9 +36,15 @@ export default function BudayaDetail() {
           initial={{ scale: 1.1 }}
           animate={{ scale: 1 }}
           transition={{ duration: 1.5 }}
-          src={item.image} 
+          src={getCulturalImage(item)} 
           alt={item.title} 
           className="w-full h-full object-cover"
+          onError={(e) => {
+            e.target.onerror = null;
+            e.target.src = item.category === "Kuliner" 
+              ? "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=800&q=80"
+              : "https://images.unsplash.com/photo-1590073844006-33379778ae09?auto=format&fit=crop&w=800&q=80";
+          }}
         />
         <div className="absolute inset-0 bg-gradient-to-t from-[#FDFBF7] dark:from-[#030303] via-black/20 to-transparent" />
         
@@ -145,7 +152,7 @@ export default function BudayaDetail() {
       </section>
 
       {/* Gallery Section */}
-      {item.gallery && item.gallery.length > 0 && (
+      {getCulturalGallery(item) && getCulturalGallery(item).length > 0 && (
         <section className="py-24 px-6 border-t border-slate-200 dark:border-white/5">
           <div className="max-w-7xl mx-auto">
             <h2 className="text-3xl font-bold mb-12 flex items-center gap-3">
@@ -153,7 +160,7 @@ export default function BudayaDetail() {
               Galeri Visual
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {item.gallery.map((img, idx) => (
+              {getCulturalGallery(item).map((img, idx) => (
                 <motion.div
                   key={idx}
                   initial={{ opacity: 0, scale: 0.95 }}
@@ -162,7 +169,17 @@ export default function BudayaDetail() {
                   transition={{ delay: idx * 0.1 }}
                   className="rounded-[3rem] overflow-hidden shadow-2xl border border-white/10 aspect-[4/3]"
                 >
-                  <img src={img} alt={`${item.title} gallery ${idx}`} className="w-full h-full object-cover hover:scale-110 transition-transform duration-700" />
+                  <img 
+                    src={img} 
+                    alt={`${item.title} gallery ${idx}`} 
+                    className="w-full h-full object-cover hover:scale-110 transition-transform duration-700" 
+                    onError={(e) => {
+                      e.target.onerror = null;
+                      e.target.src = item.category === "Kuliner" 
+                        ? "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=800&q=80"
+                        : "https://images.unsplash.com/photo-1590073844006-33379778ae09?auto=format&fit=crop&w=800&q=80";
+                    }}
+                  />
                 </motion.div>
               ))}
             </div>
@@ -178,7 +195,17 @@ export default function BudayaDetail() {
                {CULTURAL_DATA.filter(d => d.id !== item.id).slice(0, 3).map((rec) => (
                  <Link key={rec.id} to={`/budaya/${rec.id}`} className="group">
                     <div className="aspect-video rounded-3xl overflow-hidden mb-4">
-                       <img src={rec.image} alt={rec.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                       <img 
+                         src={getCulturalImage(rec)} 
+                         alt={rec.title} 
+                         className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" 
+                         onError={(e) => {
+                           e.target.onerror = null;
+                           e.target.src = rec.category === "Kuliner" 
+                             ? "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=800&q=80"
+                             : "https://images.unsplash.com/photo-1590073844006-33379778ae09?auto=format&fit=crop&w=800&q=80";
+                         }}
+                       />
                     </div>
                     <h4 className="font-bold group-hover:text-[#00A8FF] transition-colors">{rec.title}</h4>
                  </Link>

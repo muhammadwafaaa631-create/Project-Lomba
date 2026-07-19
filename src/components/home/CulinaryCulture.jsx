@@ -12,7 +12,7 @@ export default function CulinaryAndCulture() {
     { 
       id: 19,
       title: "Batagor", 
-      img: "https://upload.wikimedia.org/wikipedia/commons/2/2c/Batagor.jpg", 
+      img: "/MAKANAN/batagor.webp", 
       desc: "Fried fish dumplings with rich savory peanut sauce.",
       tag: "Must Try",
       time: "15 min",
@@ -21,7 +21,7 @@ export default function CulinaryAndCulture() {
     { 
       id: 20,
       title: "Mie Kocok", 
-      img: "https://upload.wikimedia.org/wikipedia/commons/7/7a/Mie_kocok.jpg", 
+      img: "/MAKANAN/mie-kocok.webp", 
       desc: "Flat noodles served in rich beef tendon soup with bean sprouts.",
       tag: "Iconic",
       time: "25 min",
@@ -30,7 +30,7 @@ export default function CulinaryAndCulture() {
     { 
       id: 21,
       title: "Seblak", 
-      img: "https://upload.wikimedia.org/wikipedia/commons/3/3a/Seblak_bandung.jpg", 
+      img: "/MAKANAN/seblak.png", 
       desc: "Spicy and savory wet crackers with diversos toppings.",
       tag: "Spicy Lover",
       time: "12 min",
@@ -39,7 +39,7 @@ export default function CulinaryAndCulture() {
     { 
       id: 22,
       title: "Surabi", 
-      img: "https://upload.wikimedia.org/wikipedia/commons/0/0f/Serabi.jpg", 
+      img: "/MAKANAN/surabi.webp", 
       desc: "Warm traditional pancakes cooked on clay charcoal stoves.",
       tag: "Best Snack",
       time: "10 min",
@@ -48,7 +48,7 @@ export default function CulinaryAndCulture() {
     { 
       id: 23,
       title: "Peuyeum", 
-      img: "https://upload.wikimedia.org/wikipedia/commons/6/6b/Peuyeum.jpg", 
+      img: "/MAKANAN/peuyeum.webp", 
       desc: "Sweet and soft fermented cassava traditionally from Bandung.",
       tag: "Legendary",
       time: "24h+",
@@ -57,7 +57,7 @@ export default function CulinaryAndCulture() {
     { 
       id: 24,
       title: "Cuanki", 
-      img: "https://upload.wikimedia.org/wikipedia/commons/4/45/Cuanki.jpg", 
+      img: "/MAKANAN/cuanki.webp", 
       desc: "Savory fish balls and dumplings served in warm clear broth.",
       tag: "Street Food",
       time: "10 min",

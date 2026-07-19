@@ -1,5 +1,8 @@
 import HistoryPageLayout from "../../components/history/HistoryPageLayout";
 import jalanRayaPosImg from "../../assets/history/jalan_raya_pos.png";
+import bgColonialImg from "../../assets/history/Bandung-Kolonial.jpg";
+import kotaprajaImg from "../../assets/history/KOTAPRAJA.webp";
+import raWiranatakusumah from "../../assets/history/R.A. Wiranatakusumah II.webp";
 
 export default function PendirianKota() {
     const theme = {
@@ -13,7 +16,7 @@ export default function PendirianKota() {
     const content = {
         hero: {
             subtitle: "Pendirian Kota",
-            bgImage: "https://images.unsplash.com/photo-1596431940175-3bb7242c163b?auto=format&fit=crop&q=80&w=2000"
+            bgImage: bgColonialImg
         },
         timeline: [
             {
@@ -29,7 +32,7 @@ export default function PendirianKota() {
                     { title: "Modernisasi", text: "Memperkenalkan metode konstruksi jalan modern ala Eropa ke pedalaman." }
                 ],
                 figures: [
-                    { name: "Daendels", role: "Gubernur Jenderal", desc: "Arsitek 'Grote Postweg' yang keras dan disiplin.", image: "https://images.unsplash.com/photo-1542909168-82c3e7fdca5c?auto=format&fit=crop&q=80&w=200" }
+                    { name: "Daendels", role: "Gubernur Jenderal", desc: "Arsitek 'Grote Postweg' yang keras dan disiplin.", image: bgColonialImg }
                 ],
                 facts: [
                     { title: "Fun Fact: Grote Postweg", text: "Proyek jalan ini sangat panjang. Di Bandung masa kini, sisa Grote Postweg menjadi nama jalan protokol utama seperti Jl. Jenderal Sudirman dan Jl. Asia Afrika." }
@@ -42,7 +45,7 @@ export default function PendirianKota() {
                 title: "Instruksi Pemindahan Ibukota",
                 description: "Daendels menancapkan tongkatnya di tepi Cikapundung dan memerintahkan pembangunan sebuah kota di sisi Jalan Raya Pos.",
                 longDescription: "Bupati Bandung R.A. Wiranatakusumah II secara strategis memilih lokasi yang kini menjadi Alun-alun untuk menghindari banjir tahunan di Krapyak.",
-                image: "https://images.unsplash.com/photo-1510563800743-aed236490d08?auto=format&fit=crop&q=80&w=800",
+                image: raWiranatakusumah,
                 impactText: "Menetapkan standar tata ruang kota kolonial yang bertahan selama berabad-abad.",
                 impactPoints: [
                     { title: "Tata Kota", text: "Pembagian wilayah Alun-alun, Pendopo, dan Masjid sesuai pola tradisional Sunda-Eropa." },
@@ -62,14 +65,14 @@ export default function PendirianKota() {
                 title: "Peresmian Nama Bandung",
                 description: "Tanggal bersejarah dimana ibukota resmi dipindahkan dan wilayah baru mulai dihuni secara administratif.",
                 longDescription: "Dengan peresmian ini, Bandung resmi menjadi 'Gemeente' atau kotapraja yang memiliki otonomi dalam pembangunan infrastruktur.",
-                image: "https://images.unsplash.com/photo-1611603221171-8bc4f3954605?auto=format&fit=crop&q=80&w=800",
+                image: kotaprajaImg,
                 impactText: "Menandai perubahan status Bandung dari sekadar persinggahan menjadi pusat pemerintahan.",
                 impactPoints: [
                     { title: "Kedaulatan", text: "Bandung mulai memiliki struktur pemerintahan mandiri." },
                     { title: "Identitas", text: "Lahirnya identitas 'Warga Bandung' yang modern." }
                 ],
                 figures: [
-                    { name: "Wiranatakusumah II", role: "Dalem Kaum", desc: "Dikenal sangat dicintai rakyatnya hingga dimakamkan di Masjid Agung.", image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&q=80&w=200" }
+                    { name: "Wiranatakusumah II", role: "Dalem Kaum", desc: "Dikenal sangat dicintai rakyatnya hingga dimakamkan di Masjid Agung.", image: raWiranatakusumah }
                 ],
                 facts: [
                     { title: "Fun Fact: Hari Jadi Kota", text: "Tanggal 25 September 1810 merujuk pada dikeluarkannya 'besluit' (surat keputusan) Daendels mengenai status hukum Kota Bandung, menjadikannya hari ulang tahun resmi." }

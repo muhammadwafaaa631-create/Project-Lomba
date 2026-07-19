@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Search, Filter, Palette, Music, Utensils, Theater, Landmark, ChevronRight } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 import { CULTURAL_DATA } from "../data/culturalData";
+import { getCulturalImage } from "../utils/imageHelper";
 
 const CATEGORIES = [
   { name: "Semua", icon: Landmark, id: "semua" },
@@ -174,10 +175,16 @@ export default function Budaya() {
                       <div className="h-full bg-white dark:bg-[#0B1120]/60 backdrop-blur-xl border border-slate-200 dark:border-white/10 rounded-[2.5rem] overflow-hidden flex flex-col hover:border-[#00A8FF]/30 transition-all duration-500 hover:shadow-2xl hover:shadow-[#00A8FF]/10 hover:-translate-y-2">
                         <div className="relative h-64 overflow-hidden">
                           <img 
-                            src={item.image} 
+                            src={getCulturalImage(item)} 
                             alt={item.title} 
                             className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700 p-2 rounded-[2.5rem]"
                             loading="lazy"
+                            onError={(e) => {
+                              e.target.onerror = null;
+                              e.target.src = item.category === "Kuliner" 
+                                ? "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=800&q=80"
+                                : "https://images.unsplash.com/photo-1590073844006-33379778ae09?auto=format&fit=crop&w=800&q=80";
+                            }}
                           />
                           <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
                         </div>
